@@ -1,0 +1,183 @@
+{
+  "simDate": {
+    "iso": "2023-04-24",
+    "label": "24 Apr 2023"
+  },
+  "user": {
+    "name": "User (Gen)"
+  },
+  "chrome": {
+    "brand": "HedgeTutor",
+    "nav": ["HOME", "TUTORIALS", "CASE STUDIES", "SIMULATIONS"]
+  },
+  "tickers": [
+    {
+      "code": "PhA",
+      "price": 82.0,
+      "delta": 2.27,
+      "changePct": 2.85,
+      "direction": "up"
+    }
+  ],
+  "charts": {
+    "physicalMarket": {
+      "subtitle": "Physical Products Prices ($/t)",
+      "yMin": 50,
+      "yMax": 125,
+      "yTicks": [50, 75, 100, 125],
+      "xLabels": ["Dec 25", "Feb 26", "Apr 28", "Jun 26"],
+      "series": [
+        {
+          "id": "pha",
+          "color": "#1B297D",
+          "points": [72, 78, 85, 88, 92, 95, 98, 102, 108, 112, 118, 120]
+        },
+        {
+          "id": "phb",
+          "color": "#009EE0",
+          "points": [58, 62, 65, 68, 70, 72, 74, 78, 82, 86, 90, 94]
+        }
+      ]
+    },
+    "financialMarket": {
+      "subtitle": "Settlement Prices ($/t)",
+      "yMin": 50,
+      "yMax": 125,
+      "yTicks": [50, 75, 100, 125],
+      "xLabels": ["Dec 25", "Feb 26", "Apr 28", "Jun 26"],
+      "series": [
+        {
+          "id": "fab",
+          "color": "#24BAE4",
+          "points": [88, 95, 82, 110, 98, 105, 90, 118, 100, 108, 95, 112]
+        }
+      ]
+    },
+    "termStructure": {
+      "subtitle": "Term Structure ($/t)",
+      "yMin": 50,
+      "yMax": 125,
+      "yTicks": [50, 75, 100, 125],
+      "xLabels": ["M1", "M3", "M6", "M12"],
+      "fill": "#10B981",
+      "fillOpacity": 0.18,
+      "series": [
+        {
+          "id": "curve",
+          "color": "#10B981",
+          "points": [62, 78, 95, 112]
+        }
+      ]
+    },
+    "priceDifferentials": {
+      "subtitle": "Price Differentials ($/t)",
+      "yMin": -20,
+      "yMax": 20,
+      "yTicks": [-20, -10, 0, 10, 20],
+      "xLabels": ["Jan", "Mar", "May", "Jul"],
+      "positive": {
+        "color": "#3B82F6",
+        "points": [8, 12, 6, 14, 10, 15, 9, 11]
+      },
+      "negative": {
+        "color": "#F65158",
+        "points": [-5, -9, -4, -12, -7, -10, -6, -8]
+      }
+    },
+    "annualVolatility": {
+      "subtitle": "Settlement Prices Annual Vol (%)",
+      "yMin": 0,
+      "yMax": 125,
+      "yTicks": [0, 40, 80, 125],
+      "xLabels": ["Dec 25", "Feb 26", "Apr 28", "Jun 26"],
+      "series": [
+        {
+          "id": "vol",
+          "color": "#24BAE4",
+          "points": [40, 95, 70, 55, 48, 52, 45, 50, 42, 47, 44, 46]
+        }
+      ]
+    },
+    "inventoryLevels": {
+      "subtitle": "Market Inventory Levels",
+      "yMin": 0,
+      "yMax": 40,
+      "yTicks": [0, 10, 20, 30, 40],
+      "xLabels": ["W1", "W4", "W8", "W12"],
+      "bars": {
+        "color": "#009EE0",
+        "values": [12, 18, 22, 28, 24, 30, 26, 32, 29, 34, 31, 35, 28, 33, 30, 36]
+      }
+    }
+  },
+  "tables": {
+    "physicalPrices": {
+      "title": "Physical Prices ($/t)",
+      "columns": ["Code", "Spot", "Last", "Last Month"],
+      "rows": [
+        {
+          "code": "PhA",
+          "codeTone": "accent",
+          "spot": 82.0,
+          "last": 79.7,
+          "lastChangePct": 2.85,
+          "lastMonth": 98.3,
+          "lastMonthChangePct": -16.6
+        },
+        {
+          "code": "PhB",
+          "codeTone": "accent",
+          "spot": 64.4,
+          "last": 63.0,
+          "lastChangePct": 2.3,
+          "lastMonth": 79.4,
+          "lastMonthChangePct": -18.9
+        }
+      ]
+    },
+    "cashPrices": {
+      "title": "Cash Prices ($/t)",
+      "columns": ["Code", "Spot", "Last", "Last Month"],
+      "rows": [
+        {
+          "code": "FAB",
+          "codeTone": "accent",
+          "spot": 73.5,
+          "last": 79.7,
+          "lastChangePct": 2.85,
+          "lastMonth": 98.3,
+          "lastMonthChangePct": -16.6
+        },
+        {
+          "code": "Vol%",
+          "codeTone": "cyan",
+          "spot": 51.6,
+          "last": null,
+          "lastChangePct": null,
+          "lastMonth": null,
+          "lastMonthChangePct": null
+        }
+      ]
+    },
+    "termStructurePrices": {
+      "title": "Term Structure Prices ($/t)",
+      "columns": ["Code", "Spot", "Spot", "Spot", "Spot", "Spot"],
+      "rows": [
+        {
+          "code": "FAB",
+          "codeTone": "accent",
+          "values": [73.6, 73.8, 74.1, 74.5, 75.0]
+        },
+        {
+          "code": "",
+          "codeTone": "default",
+          "values": [-0.80, -0.27, 0.41, 0.95, 1.62]
+        }
+      ]
+    }
+  },
+  "_meta": {
+    "note": "Mock values approximated from Figma frame 1032:1449 visual readout. Replace via API later.",
+    "source": "PHYSICAL MARKET visual inventory @ ~90% zoom"
+  }
+}

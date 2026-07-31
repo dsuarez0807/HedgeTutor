@@ -1,0 +1,74 @@
+<!-- Greeks — frame Figma 1032:2324 · fragment for #dashboard-content -->
+<div class="gr" data-module="greeks" data-figma-node="1032:2324">
+
+  <div class="content__grid content__grid--charts gr__charts">
+
+    <article class="card card--chart card--gr-chart">
+      <header class="card__header card__header--gr">
+        <h2 class="card__title">DELTA OF PHYSICAL PORTFOLIO</h2>
+        <button class="card__info" type="button" data-help-id="780" aria-label="Help: Delta of Physical Portfolio">
+          <img src="assets/icons/info.svg" width="14" height="14" alt="" aria-hidden="true">
+        </button>
+      </header>
+      <div class="card__body">
+        <div class="chart" data-gr-chart="physical" role="img" aria-label="Delta of Physical Portfolio chart"></div>
+      </div>
+    </article>
+
+    <article class="card card--chart card--gr-chart">
+      <header class="card__header card__header--gr">
+        <h2 class="card__title">DELTA OF FINANCIAL PORTFOLIO</h2>
+        <button class="card__info" type="button" data-help-id="770" aria-label="Help: Delta of Financial Portfolio">
+          <img src="assets/icons/info.svg" width="14" height="14" alt="" aria-hidden="true">
+        </button>
+      </header>
+      <div class="card__body">
+        <div class="chart" data-gr-chart="financial" role="img" aria-label="Delta of Financial Portfolio chart"></div>
+      </div>
+    </article>
+
+    <article class="card card--chart card--gr-chart">
+      <header class="card__header card__header--gr">
+        <div class="card__title-block">
+          <h2 class="card__title">DELTA OF TOTAL PORTFOLIO</h2>
+          <p class="card__subtitle">Physical_Financial_Total</p>
+        </div>
+        <button class="card__info" type="button" data-help-id="770" aria-label="Help: Delta of Total Portfolio">
+          <img src="assets/icons/info.svg" width="14" height="14" alt="" aria-hidden="true">
+        </button>
+      </header>
+      <div class="card__body">
+        <div class="chart" data-gr-chart="total" role="img" aria-label="Delta of Total Portfolio chart"></div>
+      </div>
+    </article>
+
+  </div>
+
+  <article class="card card--gr-summary">
+    <header class="card__header pt-card__header">
+      <h2 class="card__title">SUMMARY OF CREDIT ACCOUNT MOVES</h2>
+    </header>
+    <div class="card__body">
+      <div class="table-wrap table-wrap--gr">
+        <table class="table table--gr" data-table="greeksSummary">
+          <thead class="table__head table__head--shaded">
+            <tr class="table__row">
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--sort" scope="col">SimDate</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded" scope="col">Trade Name</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num table__cell--sort" scope="col">Cumulative Delta</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num table__cell--sort" scope="col">Delta</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num table__cell--sort" scope="col">Gama</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num table__cell--sort" scope="col">Rho</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num table__cell--sort" scope="col">Theta</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num table__cell--sort" scope="col">Vega</th>
+            </tr>
+          </thead>
+          <tbody class="table__body" data-gr-summary-body>
+            <!-- hydrated -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </article>
+
+</div>

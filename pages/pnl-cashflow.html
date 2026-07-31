@@ -1,0 +1,72 @@
+<!-- PnL and Cash Flow — frame Figma 1032:1902 · fragment for #dashboard-content -->
+<div class="pnl" data-module="pnl-cash-flow" data-figma-node="1032:1902">
+
+  <div class="content__grid content__grid--charts pnl__charts">
+
+    <article class="card card--chart card--pnl-chart">
+      <header class="card__header">
+        <h2 class="card__title">PHYSICAL CASH FLOW AND PNL (K$)</h2>
+        <p class="card__subtitle pnl-legend" data-pnl-legend>
+          <span class="pnl-legend__cash">_CashFlow</span>
+          <span class="pnl-legend__pnl">_ProfitLoss_</span>
+        </p>
+      </header>
+      <div class="card__body">
+        <div class="chart" data-pnl-chart="physical" role="img" aria-label="Physical Cash Flow and PnL chart"></div>
+      </div>
+    </article>
+
+    <article class="card card--chart card--pnl-chart">
+      <header class="card__header">
+        <h2 class="card__title">FINANCIAL CASH FLOW AND PNL (K$)</h2>
+        <p class="card__subtitle pnl-legend" data-pnl-legend>
+          <span class="pnl-legend__cash">_CashFlow</span>
+          <span class="pnl-legend__pnl">_ProfitLoss_</span>
+        </p>
+      </header>
+      <div class="card__body">
+        <div class="chart" data-pnl-chart="financial" role="img" aria-label="Financial Cash Flow and PnL chart"></div>
+      </div>
+    </article>
+
+    <article class="card card--chart card--pnl-chart">
+      <header class="card__header">
+        <h2 class="card__title">TOTAL CASH FLOW AND PNL (K$)</h2>
+        <p class="card__subtitle pnl-legend" data-pnl-legend>
+          <span class="pnl-legend__cash">_CashFlow</span>
+          <span class="pnl-legend__pnl">_ProfitLoss_</span>
+        </p>
+      </header>
+      <div class="card__body">
+        <div class="chart" data-pnl-chart="total" role="img" aria-label="Total Cash Flow and PnL chart"></div>
+      </div>
+    </article>
+
+  </div>
+
+  <article class="card card--pnl-summary">
+    <header class="card__header pt-card__header">
+      <h2 class="card__title">SUMMARY OF CASH FLOW ACCOUNT MOVES (K$)</h2>
+    </header>
+    <div class="card__body">
+      <div class="table-wrap table-wrap--pnl">
+        <table class="table table--pnl" data-table="cashFlowMoves">
+          <thead class="table__head table__head--shaded">
+            <tr class="table__row">
+              <th class="table__cell table__cell--head table__cell--head-shaded" scope="col">Trade Name</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num" scope="col">Profit and Loss</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num" scope="col">Cash Flow</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num" scope="col">Cash Account</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num" scope="col">Collateral Cash</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded" scope="col">Comments</th>
+            </tr>
+          </thead>
+          <tbody class="table__body" data-pnl-moves-body>
+            <!-- hydrated -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </article>
+
+</div>

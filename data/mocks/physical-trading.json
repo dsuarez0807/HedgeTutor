@@ -1,0 +1,124 @@
+{
+  "product": "PhA",
+  "deliverySimTime": "15May2026",
+  "quantity": 1000,
+  "location": "EMEA",
+  "priceMode": "floating",
+  "additionalFixDiff": 0,
+  "additionalPctDiff": "0%",
+  "calculationPeriod": "Spot (Default)",
+  "marketQuote": 82.0,
+  "side": "buy",
+  "confirmSummary": "Buy 1,000.0 t. CF Amount = 81.97 $/t * 1,000.0 t = $ -82.0k",
+  "payoff": {
+    "xMin": 72,
+    "xMax": 92,
+    "yMin": -12,
+    "yMax": 12,
+    "line": [
+      [72, -12],
+      [92, 12]
+    ]
+  },
+  "inventoryInsOuts": {
+    "xMin": 72,
+    "xMax": 92,
+    "yMin": -12,
+    "yMax": 12,
+    "legend": "PhA_in, PhB_in, PhA_out, PhB_out",
+    "line": [
+      [72, 6.0],
+      [92, -7.0]
+    ]
+  },
+  "projInventoryLevels": {
+    "xMin": 82,
+    "xMax": 92,
+    "yMin": -12,
+    "yMax": 12,
+    "xStep": 2,
+    "yTicks": [12, 9, 6, -12],
+    "yScale": "ticks",
+    "showNegBand": false,
+    "showVerticalGrid": false,
+    "gridDash": "2 3",
+    "plotFill": "#E8EAF2",
+    "legendParts": [
+      { "text": "PhAFcst", "tone": "cyan" },
+      { "text": "_", "tone": "navy" },
+      { "text": "PhBFcst", "tone": "navy" }
+    ],
+    "series": [
+      {
+        "className": "payoff-line payoff-line--cyan",
+        "color": "#009EE0",
+        "width": 2.5,
+        "points": [[82, 9], [92, 9]]
+      },
+      {
+        "className": "payoff-line payoff-line--navy",
+        "color": "#1B297D",
+        "width": 2.5,
+        "points": [[82, 6], [92, 6]]
+      }
+    ]
+  },
+  "greeks": {
+    "headers": {
+      "actual": ["Amer", "EMEA", "Asia", "Total"],
+      "forecasted": ["Amer", "EMEA", "Asia", "Total"]
+    },
+    "rows": [
+      {
+        "code": "FAB",
+        "actual": [73.6, 73.8, 82.0, 82.0],
+        "forecasted": [82.0, 82.0, 82.0, 82.0]
+      },
+      {
+        "code": "PhB",
+        "actual": [-0.8, -0.27, -0.44, -0.97],
+        "forecasted": [-2.0, -2.0, -2.0, -2.0]
+      },
+      {
+        "code": "Total",
+        "actual": [-0.8, -0.27, -0.44, -0.97],
+        "forecasted": [-2.0, -2.0, -2.0, -2.0]
+      }
+    ]
+  },
+  "executedTrades": [
+    {
+      "tradeSimDate": "14May26",
+      "tradeCode": "PhA(15May26)-1",
+      "qty": "73.8",
+      "deliverySimDate": "15May26",
+      "settleSimDate": "15May26",
+      "location": "EMA",
+      "price": "82.0",
+      "amount": "82.0",
+      "comments": "BUY 1,000.0 t @ 82.0 $/t"
+    },
+    {
+      "tradeSimDate": "10May26",
+      "tradeCode": "PhB(12May26)-1",
+      "qty": "40.0",
+      "deliverySimDate": "12May26",
+      "settleSimDate": "12May26",
+      "location": "Amer",
+      "price": "64.4",
+      "amount": "25.8",
+      "comments": "SELL 500.0 t @ 64.4 $/t"
+    },
+    {
+      "tradeSimDate": "18May26",
+      "tradeCode": "PhA(20May26)-2",
+      "qty": "100.0",
+      "deliverySimDate": "20May26",
+      "settleSimDate": "20May26",
+      "location": "Asia",
+      "price": "90.5",
+      "amount": "90.5",
+      "comments": "BUY 1,000.0 t @ 90.5 $/t"
+    }
+  ]
+}

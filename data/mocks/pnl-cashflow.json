@@ -1,0 +1,116 @@
+{
+  "charts": {
+    "physical": {
+      "yMin": 50,
+      "yMax": 125,
+      "yTicks": [50, 65, 80, 95, 110, 125],
+      "xLabels": ["Dec 25", "Feb 26", "Jun 26"],
+      "bandMax": 95,
+      "bandColor": "#FFBABA",
+      "bandOpacity": 0.35,
+      "lineColor": "#009EE0",
+      "points": [95, 102, 118, 110, 115, 112, 114],
+      "marker": { "color": "#1B297D", "width": 10 }
+    },
+    "financial": {
+      "yMin": 50,
+      "yMax": 125,
+      "yTicks": [50, 65, 80, 95, 110, 125],
+      "xLabels": ["Dec 25", "Feb 26", "Jun 26"],
+      "bandMax": 95,
+      "bandColor": "#FFBABA",
+      "bandOpacity": 0.35,
+      "lineColor": "#009EE0",
+      "points": [95, 95, 95, 95, 95, 95, 95],
+      "marker": null
+    },
+    "total": {
+      "yMin": 50,
+      "yMax": 125,
+      "yTicks": [50, 65, 80, 95, 110, 125],
+      "xLabels": ["Dec 25", "Feb 26", "Jun 26"],
+      "bandMax": 95,
+      "bandColor": "#FFBABA",
+      "bandOpacity": 0.35,
+      "lineColor": "#009EE0",
+      "points": [95, 100, 116, 108, 114, 110, 113],
+      "marker": { "color": "#EF4444", "width": 10 }
+    }
+  },
+  "cashFlowMoves": {
+    "rows": [
+      {
+        "type": "detail",
+        "tradeName": "PhA(15May26)_1",
+        "pnl": "28.2",
+        "cashFlow": "0",
+        "cashAccount": "1.8",
+        "collateral": "",
+        "comments": "MtM=$28.2k=(Pf:110.2 - Pi:82.0)$/t * 1.0k t"
+      },
+      {
+        "type": "total",
+        "tradeName": "13Jul26 Total",
+        "pnl": "28.2",
+        "cashFlow": "0",
+        "cashAccount": "1,418",
+        "collateral": "0",
+        "comments": ""
+      },
+      {
+        "type": "detail",
+        "tradeName": "PhA(15May26)_1",
+        "pnl": "28.2",
+        "cashFlow": "0",
+        "cashAccount": "1.8",
+        "collateral": "",
+        "comments": "MtM=$28.2k=(Pf:110.2 - Pi:82.0)$/t * 1.0k t"
+      },
+      {
+        "type": "total",
+        "tradeName": "13Jul26 Total",
+        "pnl": "28.2",
+        "cashFlow": "0",
+        "cashAccount": "1,418",
+        "collateral": "0",
+        "comments": ""
+      },
+      {
+        "type": "detail",
+        "tradeName": "PhA(15May26)_1",
+        "pnl": "28.2",
+        "cashFlow": "0",
+        "cashAccount": "1.8",
+        "collateral": "",
+        "comments": "MtM=$28.2k=(Pf:110.2 - Pi:82.0)$/t * 1.0k t"
+      },
+      {
+        "type": "total",
+        "tradeName": "13Jul26 Total",
+        "pnl": "28.2",
+        "cashFlow": "0",
+        "cashAccount": "1,418",
+        "collateral": "0",
+        "comments": ""
+      },
+      {
+        "type": "detail",
+        "tradeName": "PhA(15May26)_1",
+        "pnl": "28.2",
+        "cashFlow": "0",
+        "cashAccount": "1.8",
+        "collateral": "",
+        "comments": "MtM=$28.2k=(Pf:110.2 - Pi:82.0)$/t * 1.0k t"
+      },
+      {
+        "type": "total",
+        "tradeName": "13Jul26 Total",
+        "pnl": "28.2",
+        "cashFlow": "0",
+        "cashAccount": "1,418",
+        "collateral": "0",
+        "comments": ""
+      }
+    ]
+  }
+}

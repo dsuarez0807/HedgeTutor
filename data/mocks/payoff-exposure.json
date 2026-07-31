@@ -1,0 +1,112 @@
+{
+  "charts": {
+    "physicalMarket": {
+      "subtitle": "Physical Products Prices ($/t)",
+      "yMin": 50,
+      "yMax": 125,
+      "yTicks": [50, 65, 80, 95, 110, 125],
+      "xLabels": ["Dec 25", "Feb 26", "Apr 26", "Jun 26"],
+      "fillBelow": true,
+      "fillColor": "#FFBABA",
+      "fillOpacity": 0.35,
+      "series": [
+        {
+          "id": "level",
+          "color": "#009EE0",
+          "value": 95
+        }
+      ]
+    },
+    "financialMarket": {
+      "subtitle": "Settlement Prices ($/t)",
+      "yMin": 50,
+      "yMax": 125,
+      "yTicks": [50, 65, 80, 95, 110, 125],
+      "xLabels": ["Dec 25", "Feb 26", "Apr 26", "Jun 26"],
+      "fillBelow": true,
+      "fillColor": "#FFBABA",
+      "fillOpacity": 0.35,
+      "series": [
+        {
+          "id": "level",
+          "color": "#1B297D",
+          "value": 95
+        }
+      ]
+    },
+    "termoStructure": {
+      "subtitle": "Physical_Financial_Total",
+      "yMin": 50,
+      "yMax": 125,
+      "yTicks": [50, 65, 80, 95, 110, 125],
+      "xLabels": ["May 26", "Sep 27", "Dec 27", "Apr 27"],
+      "fillBelow": true,
+      "fillColor": "#FFBABA",
+      "fillOpacity": 0.35,
+      "series": [
+        {
+          "id": "level",
+          "color": "#00A63E",
+          "value": 90
+        }
+      ]
+    },
+    "priceDifferentials": {
+      "subtitle": "",
+      "yMin": -20,
+      "yMax": 10,
+      "yTicks": [10, 0, -20],
+      "yTickLabels": ["10.0", "00", "-20.0"],
+      "xLabels": ["13Jun", "12Jun", "14Jun", "15Jun"],
+      "fillBelow": false,
+      "series": [
+        {
+          "id": "level",
+          "color": "#EF4444",
+          "value": 0
+        }
+      ]
+    },
+    "annualVolatility": {
+      "subtitle": "",
+      "yMin": -20,
+      "yMax": 10,
+      "yTicks": [10, 0, -20],
+      "yTickLabels": ["10.0", "00", "-20.0"],
+      "xLabels": ["13Jun", "12Jun", "14Jun", "15Jun"],
+      "fillBelow": false,
+      "series": [
+        {
+          "id": "level",
+          "color": "#009EE0",
+          "value": 0
+        }
+      ]
+    },
+    "annualVolatilityTotal": {
+      "subtitle": "Physical_Financial_Total",
+      "yMin": -20,
+      "yMax": 10,
+      "yTicks": [10, 0, -20],
+      "yTickLabels": ["10.0", "00", "-20.0"],
+      "xLabels": ["13Jun", "12Jun", "14Jun", "15Jun"],
+      "fillBelow": false,
+      "series": [
+        {
+          "id": "level",
+          "color": "#009EE0",
+          "value": 0
+        }
+      ]
+    }
+  },
+  "exposureProfile": {
+    "columns": ["Portfolio/Trade Name", "Jul 26", "Max"],
+    "rows": [
+      { "name": "Total Exposure", "jul26": "2.5", "max": "1.8" },
+      { "name": "Physical Exposure", "jul26": "2.5", "max": "2.5" },
+      { "name": "Financial Exposure", "jul26": "2.3", "max": "2.1" },
+      { "name": "PhA(15May26)_1", "jul26": "2.1", "max": "2.1" }
+    ]
+  }
+}

@@ -1,0 +1,213 @@
+<!-- Physical Trading — frame Figma 1032:2970 · fragment for #dashboard-content -->
+<div class="pt" data-module="physical-trading" data-figma-node="1032:2970">
+
+  <div class="pt__top">
+
+    <article class="card card--pt-input">
+      <header class="card__header pt-card__header">
+        <h2 class="card__title">PHYSICAL TRADING INPUT</h2>
+      </header>
+      <div class="card__body pt-input">
+
+        <div class="pt-input__grid pt-input__grid--top">
+          <div class="field field--pt">
+            <label class="field__label" for="pt-product">Product</label>
+            <select class="select field__control field__control--pt" id="pt-product" name="product">
+              <option value="PhA" selected>PhA</option>
+              <option value="PhB">PhB</option>
+              <option value="FAB">FAB</option>
+            </select>
+          </div>
+
+          <div class="field field--pt">
+            <label class="field__label" for="pt-delivery-trigger">Delivery SimTime</label>
+            <div class="date-field" data-date-field>
+              <input type="hidden" id="pt-delivery" name="deliverySimTime" value="15May2026" data-date-field-input>
+            </div>
+          </div>
+        </div>
+
+        <!-- Qty | Location | Price — same row (Figma / capture) -->
+        <div class="pt-input__grid pt-input__grid--3">
+          <div class="field field--pt">
+            <label class="field__label" for="pt-qty">Quantity (t)</label>
+            <div class="stepper stepper--inline">
+              <input class="input field__control field__control--pt stepper__input" id="pt-qty" name="quantity" type="text" value="1,000" inputmode="numeric">
+              <div class="stepper__actions">
+                <button class="stepper__btn" type="button" data-step="-100" aria-label="Decrease quantity">−</button>
+                <button class="stepper__btn" type="button" data-step="100" aria-label="Increase quantity">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="field field--pt">
+            <span class="field__label">Location</span>
+            <div class="seg seg--single" role="group" aria-label="Location">
+              <button class="seg__btn seg__btn--active" type="button" data-location="EMEA" aria-pressed="true">EMEA</button>
+            </div>
+          </div>
+
+          <div class="field field--pt">
+            <span class="field__label">Price</span>
+            <div class="radio-row radio-row--tight" role="radiogroup" aria-label="Price type">
+              <label class="radio">
+                <input class="radio__input" type="radio" name="priceMode" value="floating" checked>
+                <span class="radio__label">Floating Price</span>
+              </label>
+              <label class="radio">
+                <input class="radio__input" type="radio" name="priceMode" value="fixed">
+                <span class="radio__label">Fixed Price</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Price fields -->
+        <div class="pt-input__grid pt-input__grid--3" data-price-panel="floating">
+          <div class="field field--pt">
+            <label class="field__label" for="pt-fix-diff">Aditional Fix Diff</label>
+            <input class="input field__control field__control--pt" id="pt-fix-diff" name="additionalFixDiff" type="text" value="0">
+          </div>
+
+          <div class="field field--pt">
+            <label class="field__label" for="pt-pct-diff">Aditional % Diff</label>
+            <select class="select field__control field__control--pt" id="pt-pct-diff" name="additionalPctDiff">
+              <option value="0%" selected>0%</option>
+              <option value="1%">1%</option>
+              <option value="5%">5%</option>
+            </select>
+          </div>
+
+          <div class="field field--pt">
+            <label class="field__label" for="pt-period">Calculation Period</label>
+            <select class="select field__control field__control--pt" id="pt-period" name="calculationPeriod">
+              <option value="Spot (Default)" selected>Spot (Default)</option>
+              <option value="Spot Delivery Date">Spot Delivery Date</option>
+              <option value="Avg Trade Month">Avg Trade Month</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Fixed Price fields (Interaction 2) -->
+        <div class="pt-input__grid pt-input__grid--2" data-price-panel="fixed" hidden>
+          <div class="field field--pt">
+            <label class="field__label" for="pt-fixed-price">Input Fixed Price</label>
+            <input class="input field__control field__control--pt" id="pt-fixed-price" name="inputFixedPrice" type="text" value="110" inputmode="decimal">
+          </div>
+
+          <div class="field field--pt">
+            <label class="field__label" for="pt-payment">Payment</label>
+            <select class="select field__control field__control--pt" id="pt-payment" name="payment">
+              <option value="On Delivery (Default)" selected>On Delivery (Default)</option>
+              <option value="On Settlement">On Settlement</option>
+              <option value="Advance">Advance</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="pt-input__quote-row">
+          <div class="quote-box">
+            <span class="quote-box__label">Market Quote ($/t)</span>
+            <span class="quote-box__value" data-pt="marketQuote">82.0</span>
+          </div>
+          <div class="action-box">
+            <div class="radio-row radio-row--compact" role="radiogroup" aria-label="Side">
+              <label class="radio">
+                <input class="radio__input" type="radio" name="side" value="buy" checked>
+                <span class="radio__label">Buy</span>
+              </label>
+              <label class="radio">
+                <input class="radio__input" type="radio" name="side" value="sell">
+                <span class="radio__label">Sell</span>
+              </label>
+            </div>
+            <button class="button button--confirm" type="button">Confirm</button>
+          </div>
+        </div>
+
+        <p class="pt-input__summary" data-pt="confirmSummary">Buy 1,000.0 t. CF Amount = 81.97 $/t * 1,000.0 t = $ -82.0k</p>
+      </div>
+    </article>
+
+    <div class="pt__right">
+
+      <article class="card card--pt-payoff">
+        <header class="card__header pt-card__header pt-card__header--tabs">
+          <h2 class="card__title">PAYOFF AND INVENTORY LEVELS</h2>
+          <div class="tabs" role="tablist" aria-label="Payoff views">
+            <button class="tabs__btn tabs__btn--active" type="button" role="tab" aria-selected="true" data-tab="payoff">Payoff ($/t)</button>
+            <button class="tabs__btn" type="button" role="tab" aria-selected="false" data-tab="inventory-io">Inventory Ins&amp;Outs (kt)</button>
+            <button class="tabs__btn" type="button" role="tab" aria-selected="false" data-tab="proj-inventory">Proj Inventory Levels (kt)</button>
+          </div>
+        </header>
+        <div class="card__body pt-payoff__body">
+          <p class="pt-chart__legend" data-pt-chart-legend hidden></p>
+          <div class="chart chart--payoff" data-chart="payoff" role="img" aria-label="Payoff chart"></div>
+        </div>
+      </article>
+
+      <article class="card card--pt-greeks">
+        <header class="card__header pt-card__header">
+          <h2 class="card__title">GREEKS</h2>
+        </header>
+        <div class="card__body">
+          <div class="table-wrap table-wrap--greeks">
+            <table class="table table--greeks" data-table="greeks">
+              <thead class="table__head table__head--shaded">
+                <tr class="table__row table__row--group">
+                  <th class="table__cell table__cell--head table__cell--group" scope="colgroup" colspan="5">Actual Level</th>
+                  <th class="table__cell table__cell--head table__cell--group" scope="colgroup" colspan="4">Forecasted Level</th>
+                </tr>
+                <tr class="table__row">
+                  <th class="table__cell table__cell--head table__cell--head-shaded table__cell--sort" scope="col">Code</th>
+                  <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num table__cell--sort" scope="col">Amer</th>
+                  <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num table__cell--sort" scope="col">EMEA</th>
+                  <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num table__cell--sort" scope="col">Asia</th>
+                  <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num table__cell--sort" scope="col">Total</th>
+                  <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num table__cell--sort" scope="col">Amer</th>
+                  <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num table__cell--sort" scope="col">EMEA</th>
+                  <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num table__cell--sort" scope="col">Asia</th>
+                  <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num table__cell--sort" scope="col">Total</th>
+                </tr>
+              </thead>
+              <tbody class="table__body" data-pt-greeks-body>
+                <!-- hydrated by physical-trading.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <article class="card card--pt-trades">
+    <header class="card__header pt-card__header">
+      <h2 class="card__title">SUMMARY OF EXECUTED PHYSICAL TRADES</h2>
+    </header>
+    <div class="card__body">
+      <div class="table-wrap">
+        <table class="table table--trades" data-table="executedTrades">
+          <thead class="table__head table__head--shaded">
+            <tr class="table__row">
+              <th class="table__cell table__cell--head table__cell--head-shaded" scope="col">Trade SimDate</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded" scope="col">Trade Code</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--sort" scope="col">Qty (k)t Ini (final)</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--sort" scope="col">Delivery SimDate</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--sort" scope="col">Settle SimDate</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded" scope="col">Location</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--sort" scope="col">Price $/t</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--sort" scope="col">Amount (k$)</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded" scope="col">Comments</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--icon" scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody class="table__body" data-pt-trades-body>
+            <!-- hydrated by physical-trading.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </article>
+
+</div>

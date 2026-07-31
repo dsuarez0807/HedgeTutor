@@ -1,0 +1,54 @@
+/* Chart mount visuals — desktop 1440 × 985 only */
+
+.chart {
+  position: relative;
+  background-color: transparent;
+}
+
+.chart-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.chart-svg__grid {
+  stroke: var(--color-border);
+  stroke-width: 1;
+  stroke-dasharray: 2 3;
+}
+
+.chart-svg__axis {
+  stroke: var(--color-gray-d1);
+  stroke-width: 1;
+}
+
+.chart-svg__zero {
+  stroke: var(--color-text-muted);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+}
+
+.chart-svg__line {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.chart-svg__bar {
+  vector-effect: non-scaling-stroke;
+}
+
+.chart-svg__label {
+  fill: var(--color-text-muted);
+  font-family: var(--font-family);
+  font-size: 9px;
+}
+
+.chart-svg__label--y {
+  text-anchor: end;
+}
+
+.chart-svg__label--x {
+  text-anchor: middle;
+}

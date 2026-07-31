@@ -1,0 +1,219 @@
+/* Commos Consulting — design tokens
+ *
+ * ONLY values measured from Figma Design Properties / Edit style.
+ * Organized by category. Incomplete entries stay in NOT MEASURED.
+ * Do not invent hex/spacing.
+ */
+
+:root {
+  /* ========== colors ========== */
+  --color-page-bg: #f6f6fa;
+  --color-canvas: #e5e5e5;
+  --color-surface: #ffffff;
+  --color-sidebar: #1b297d;
+  --color-nav-item-active-bg: #009ee0;
+  --color-nav-item-inactive-bg: #1b297d;
+  --color-nav-item-text: #ffffff;
+  --color-accent: #009ee0;
+  --color-primary-button-bg: #009ee0;
+  --color-primary-button-text: #ffffff;
+  --color-neutral-black-100: #364153;
+  --color-border: #e5e7eb;
+  --color-text-muted: #4a5565;
+  --color-negative: #ef4444;
+  --color-black: #000000;
+  --color-positive: #00a63e;
+  --color-positive-alt: #2ebd57;
+  --color-blue-500: #3b82f6;
+  --color-blue-tint: #f0f6ff;
+  --color-cyan: #24bae4;
+  /*
+   * Toolbar fill — Figma Dashboard Header bar: #009EE0 (same as accent / Primary).
+   */
+  --color-toolbar-fill: #009ee0;
+  --color-emerald: #10b981;
+  --color-gray-d1: #d1d1d1;
+  --color-gray-de: #dedede;
+  --color-coral: #f65158;
+  --color-negative-tint: #ffbaba; /* opacity 35% where used */
+  --color-input-select-text: #9696a0;
+  --color-input-select-muted: #b5b5c3; /* opacity 38% where used */
+  /* Dropdown / Select — Figma UI Kit states */
+  --color-dropdown-border: #d3d3d5;
+  --color-dropdown-border-hover: #9696a0;
+  --color-dropdown-text: #9696a0;
+  --color-dropdown-text-strong: #364153;
+  --color-dropdown-focus: #1b297d;
+  --color-dropdown-option-hover: #f0f0f0;
+  --radius-dropdown: 6px;
+  --shadow-dropdown: 0 4px 12px rgba(54, 65, 83, 0.12);
+  --color-shadow-commos: #adacac;
+  /* Physical Trading frame 1032:2970 — Selection colors */
+  --color-pt-summary-bg: #f2fbff;
+  --color-pt-row-alt: #f5f6f8;
+  --color-pt-surface-muted: #f0f0f0;
+  --color-pt-border-soft: #d3d3d5;
+  --color-pt-chip: #d9d9d9;
+  --color-grey-100: #49556d;
+
+  /* ========== typography ========== */
+  --font-family: "Inter", sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600; /* Inter Semi Bold — seen on Dashboard Header related text */
+  --font-weight-bold: 700;
+  --font-size-paragraph: 14px;
+  --line-height-paragraph: 28px;
+  --letter-spacing-paragraph: 0%;
+  --font-size-graph: 13px;
+  --line-height-graph: 22px;
+  /* Card titles — Figma Web App Commos (e.g. node 1032:3046) */
+  --font-size-card-title: 16px;
+  --line-height-card-title: 20px;
+  --font-size-title: 50px; /* MARKET DATA text style — other frame/variant */
+  --letter-spacing-title: -0.15px;
+  --line-height-title: 61px;
+  --font-size-toolbar-lorem: 15px;
+  --line-height-toolbar-lorem: 22px;
+  --letter-spacing-toolbar-lorem: -0.1px;
+
+  /* ========== spacing ========== */
+  --sidebar-gap: 16px;
+  --sidebar-padding-left: 0px;
+  --sidebar-padding-right: 0px;
+  --sidebar-padding-top: 16px;
+  --sidebar-padding-bottom: 24px;
+  --sidebar-header-gap: 12px;
+  --sidebar-header-padding-x: 16px;
+  --sidebar-header-padding-y: 8px;
+  --nav-item-gap: 12px;
+  --nav-item-padding-x: 28px;
+  --nav-item-padding-y: 0px;
+  --button-primary-gap: 10px;
+  --button-primary-padding-x: 26px;
+  --button-primary-padding-y: 13px;
+  --dashboard-header-gap: 20px;
+  --dashboard-header-padding-x: 0px;
+  --dashboard-header-padding-y: 0px;
+
+  /* ========== dimensions ========== */
+  --frame-width: 1440px;
+  --frame-height: 985px;
+  --sidebar-width: 238px;
+  /* ASSUMED: icon-only rail from Dashboard UI Kit Side Menu collapsed */
+  --sidebar-width-collapsed: 64px;
+  --sidebar-height: 1024px;
+  --sidebar-x: 0px;
+  --sidebar-y: 60px;
+  --sidebar-header-width: 238px;
+  --sidebar-header-height: 60px;
+  --nav-item-width: 238px;
+  --nav-item-height: 48px;
+  --nav-item-label-width: 148px;
+  --nav-item-label-height: 22px;
+  /* Overridden on .dashboard when sidebar collapses */
+  --sidebar-current-width: var(--sidebar-width);
+  --main-available-width: calc(var(--frame-width) - var(--sidebar-current-width));
+  /*
+   * LAYOUT ANATOMY AND SPACING (Figma + annotated capture)
+   * Green = page inset 20 · Pink stack/column = 18 · Toolbar→content = 16 · Card pad/rhythm = 24
+   */
+  --layout-page-inset: 20px;
+  --layout-toolbar-content-gap: 16px;
+  --layout-section-gap: 18px;
+  --layout-column-gap: 18px;
+  --layout-card-pad: 24px;
+  --layout-field-col-gap: 14px;
+  /* Content width = main − left/right page inset */
+  --dashboard-header-width: calc(var(--main-available-width) - (2 * var(--layout-page-inset)));
+  --dashboard-header-height: 90px;
+  --card-asset-width: 358px;
+  --card-asset-height: 325px;
+  --button-primary-width: 216px;
+  --button-primary-height: 56px;
+  --input-select-width: 213px;
+  --input-select-height: 45px;
+  --nav-userlog-width: 1440px;
+  --nav-userlog-height: 104px;
+
+  /* ========== radius ========== */
+  --radius-frame: 0px;
+  --radius-sidebar: 0px;
+  --radius-sidebar-header: 4px;
+  --radius-nav-item: 0px;
+  --radius-card-asset: 0px;
+  --radius-button-primary: 50px;
+  --radius-input-select: 0px;
+  --radius-dashboard-header: 8px;
+  --radius-nav-userlog: 0px;
+
+  /* ========== shadows ========== */
+  --shadow-commos-x: 0px;
+  --shadow-commos-y: 0px;
+  --shadow-commos-blur: 10px;
+  --shadow-commos-spread: 0px;
+  --shadow-commos-opacity: 0.25;
+  --shadow-commos: 0 0 10px 0 rgba(173, 172, 172, 0.25);
+
+  /*
+   * Confirmation modal — Figma Assets component "Confirmation modal" (node 1076:10253)
+   * Measured: W 567 · gap 36 · pad 16 · radius 6 · Neutrals/White · selection colors
+   * Effect style name: md-1 (exact blur/spread not opened — soft elevation matched visually)
+   */
+  --color-modal-warning: #ff9800; /* Semantic/Warning — Figma Confirm icon stroke */
+  --color-modal-warning-light: #fff9f0; /* Semantic/Warning Light — measured #FFF9F0 */
+  --color-modal-border: #d9d9d9; /* measured selection color */
+  --color-modal-title: #101828; /* Grey/900 — title fill style name; hex not opened → near-black */
+  --modal-confirm-width: 567px;
+  --modal-confirm-gap: 36px;
+  --modal-confirm-padding: 16px;
+  --modal-confirm-radius: 6px;
+  --modal-confirm-title-size: 24px;
+  --modal-confirm-title-line: 32px;
+  --modal-confirm-title-tracking: -0.02em;
+  --shadow-modal-md-1: 0 4px 24px rgba(54, 65, 83, 0.14);
+
+  /*
+   * Informative modal — Figma "Informative Modal" (Help / contextual)
+   * Visual from design capture: left title, body, optional embed, Close
+   * Width larger than confirm to fit help copy + optional preview
+   */
+  --modal-info-width: 820px;
+  --modal-info-gap: 20px;
+  --modal-info-padding: 20px;
+  --modal-info-radius: 6px;
+  --modal-info-title-size: 20px;
+  --modal-info-title-line: 28px;
+
+  /* ========== layout (measured + documented assumptions) ========== */
+  /*
+   * ASSUMED — direct consequences of measured geometry / Auto Layout parents.
+   * Replace with Properties reads when available.
+   */
+  --layout-assumed-chrome-height: 60px;
+  /* = Side Menu Y (measured). Empty strip; content of chrome not mapped. */
+
+  --layout-assumed-main-inline-end: 0px;
+  /* Free space on the right of toolbar = 1202 − 1157 = 45 (empty, not padding). */
+
+  --layout-assumed-chart-columns: 3;
+  /* 3 × 358 = 1074 ≤ 1157 (Dashboard Header width). */
+
+  --layout-assumed-table-columns: 3;
+  /* Three table cards in frame inventory; widths unmeasured → equal fr. */
+
+  /* column-gap charts: calc((1157 − 3×358) / 2) in layout.css — geometric */
+
+  --layout-assumed-grid-row-gap: var(--layout-section-gap);
+  --layout-assumed-content-section-gap: var(--layout-section-gap);
+  --layout-assumed-content-padding-top: 0px;
+
+  --card-padding: var(--layout-card-pad);
+  /* Card internal pad — LAYOUT ANATOMY AND SPACING (24px). */
+
+  /*
+   * STILL OPEN / PARTIAL:
+   * chrome absolute Properties (pad/gap) — implemented from visual inventory
+   * badge Properties W/H — implemented from visual density
+   * toolbar Msg/Help/Reset — white chips, navy (#1B297D) text/icons (Figma trading frames)
+   */
+}

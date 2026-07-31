@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1440, height=985">
+  <title>PHYSICAL MARKET — Commos Consulting</title>
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/charts.css">
+</head>
+<body class="app">
+
+  <!--
+    Frame Figma: PHYSICAL MARKET (node 1032:1449)
+    Viewport: 1440 × 985 · fill #F6F6FA
+  -->
+  <div class="dashboard" data-frame="physical-market" data-figma-node="1032:1449">
+
+    <header class="dashboard__chrome chrome" aria-label="Site header">
+      <a class="chrome__brand" href="https://www.commosconsulting.com/en/account/landwelcome.html" aria-label="HedgeTutor">
+        <img
+          class="chrome__logo"
+          src="assets/icons/hedgetutor-logo.png?v=figma1"
+          width="199"
+          height="60"
+          alt="HedgeTutor"
+          draggable="false"
+        >
+      </a>
+
+      <nav class="chrome__nav" aria-label="Primary">
+        <ul class="chrome__list">
+          <li class="chrome__item chrome__item--has-menu">
+            <a class="chrome__link" href="https://www.commosconsulting.com/en/account/dashboard.html">HOME</a>
+            <ul class="chrome__menu" aria-label="Home">
+              <li><a href="https://www.commosconsulting.com/en/account/landwelcome.html">Welcome</a></li>
+              <li><a href="https://www.commosconsulting.com/en/account/dashboard.html">Dashboard</a></li>
+            </ul>
+          </li>
+          <li class="chrome__item chrome__item--has-menu">
+            <a class="chrome__link" href="https://www.commosconsulting.com/en/tutorials/tutorials.html">
+              TUTORIALS
+              <img class="chrome__chevron" src="assets/icons/chevron-down.svg" width="12" height="12" alt="" aria-hidden="true">
+            </a>
+            <ul class="chrome__menu" aria-label="Tutorials">
+              <li><a href="https://www.commosconsulting.com/en/tutorials/tutorials.html">Tutorials Library</a></li>
+              <li><a href="https://www.commosconsulting.com/en/help/theory/GEN/">Theory Guide</a></li>
+              <li><a href="https://www.commosconsulting.com/en/tutorials/quiz.html">Quiz</a></li>
+              <li><a href="https://www.commosconsulting.com/en/help/screens/GEN/">Screens Guide</a></li>
+            </ul>
+          </li>
+          <li class="chrome__item chrome__item--has-menu">
+            <a class="chrome__link" href="https://www.commosconsulting.com/en/casestudies/casestudies.html">
+              CASE STUDIES
+              <img class="chrome__chevron" src="assets/icons/chevron-down.svg" width="12" height="12" alt="" aria-hidden="true">
+            </a>
+            <ul class="chrome__menu" aria-label="Case Studies">
+              <li><a href="https://www.commosconsulting.com/en/casestudies/casestudies.html">Case Studies Library</a></li>
+              <li><a href="https://www.commosconsulting.com/en/help/case_studies/GEN/">Case Studies Guide</a></li>
+            </ul>
+          </li>
+          <li class="chrome__item chrome__item--has-menu">
+            <a class="chrome__link" href="https://www.commosconsulting.com/en/account/save_user_simulation.html">
+              SIMULATIONS
+              <img class="chrome__chevron" src="assets/icons/chevron-down.svg" width="12" height="12" alt="" aria-hidden="true">
+            </a>
+            <ul class="chrome__menu" aria-label="Simulations">
+              <li><a href="https://www.commosconsulting.com/en/account/save_user_simulation.html">User Simulations and Scenarios</a></li>
+              <li><a href="https://www.commosconsulting.com/en/account/new_simulation.html">New Simulation</a></li>
+              <li><a href="https://www.commosconsulting.com/en/account/settings.html">Advanced Simulations Settings</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="chrome__user chrome__item chrome__item--has-menu">
+        <button class="chrome__user-trigger" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="chrome-user-menu">
+          <img class="chrome__avatar" src="assets/icons/user.svg" width="28" height="28" alt="" aria-hidden="true">
+          <span class="chrome__user-name">User (Gen)</span>
+          <img class="chrome__chevron" src="assets/icons/chevron-down.svg" width="12" height="12" alt="" aria-hidden="true">
+        </button>
+        <ul class="chrome__menu chrome__menu--user" id="chrome-user-menu" aria-label="User">
+          <li><a href="https://www.commosconsulting.com/en/home/hedge_tutor.html">HedgeTutor</a></li>
+          <li><a href="https://www.commosconsulting.com/en/account/dashboard.html">Account usage</a></li>
+          <li><a href="https://www.commosconsulting.com/en/users/password.html">Change Password</a></li>
+          <li><a href="https://www.commosconsulting.com/en/users/logout">Logout</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <aside class="dashboard__sidebar sidebar" aria-label="Simulation modules">
+      <header class="sidebar__header">
+        <p class="sidebar__sim-name" id="sidebar-sim-name">Lorem Ipsum is simply dummy text</p>
+        <button
+          class="sidebar__toggle"
+          type="button"
+          id="sidebar-toggle"
+          aria-controls="sidebar-nav"
+          aria-expanded="true"
+          aria-label="Collapse sidebar"
+          title="Collapse sidebar"
+        >
+          <img class="sidebar__toggle-icon" src="assets/icons/sidebar-toggle.svg" width="24" height="16" alt="" aria-hidden="true">
+        </button>
+      </header>
+
+      <nav class="sidebar__nav" id="sidebar-nav">
+        <ul class="sidebar__list">
+          <li class="sidebar__item sidebar__item--active">
+            <a class="sidebar__link" href="/market-data" data-route="market-data" aria-current="page">
+              <span class="sidebar__icon" aria-hidden="true">
+                <img src="assets/icons/market-data.svg?v=figma1" width="20" height="20" alt="">
+              </span>
+              <span class="sidebar__label">Market Data</span>
+            </a>
+          </li>
+          <li class="sidebar__item">
+            <a class="sidebar__link" href="/physical-trading" data-route="physical-trading">
+              <span class="sidebar__icon" aria-hidden="true">
+                <img src="assets/icons/physical-trading.svg?v=figma1" width="20" height="20" alt="">
+              </span>
+              <span class="sidebar__label">Physical Trading</span>
+            </a>
+          </li>
+          <li class="sidebar__item">
+            <a class="sidebar__link" href="/financial-trading" data-route="financial-trading">
+              <span class="sidebar__icon" aria-hidden="true">
+                <img src="assets/icons/financial-trading.svg?v=figma1" width="20" height="20" alt="">
+              </span>
+              <span class="sidebar__label">Financial Trading</span>
+            </a>
+          </li>
+          <li class="sidebar__item">
+            <a class="sidebar__link" href="/payoff-exposure" data-route="payoff-exposure">
+              <span class="sidebar__icon" aria-hidden="true">
+                <img src="assets/icons/payoff-exposure.svg?v=figma1" width="20" height="20" alt="">
+              </span>
+              <span class="sidebar__label">Payoff and Exposure</span>
+            </a>
+          </li>
+          <li class="sidebar__item">
+            <a class="sidebar__link" href="/pnl-cash-flow" data-route="pnl-cash-flow">
+              <span class="sidebar__icon" aria-hidden="true">
+                <img src="assets/icons/pnl-cashflow.svg?v=figma1" width="20" height="20" alt="">
+              </span>
+              <span class="sidebar__label">PnL and Cash Flow</span>
+            </a>
+          </li>
+          <li class="sidebar__item">
+            <a class="sidebar__link" href="/credit-line" data-route="credit-line">
+              <span class="sidebar__icon" aria-hidden="true">
+                <img src="assets/icons/credit-line.svg?v=figma1" width="20" height="20" alt="">
+              </span>
+              <span class="sidebar__label">Credit Line</span>
+            </a>
+          </li>
+          <li class="sidebar__item">
+            <a class="sidebar__link" href="/greeks" data-route="greeks">
+              <span class="sidebar__icon" aria-hidden="true">
+                <img src="assets/icons/greeks.svg?v=figma1" width="20" height="20" alt="">
+              </span>
+              <span class="sidebar__label">Greeks</span>
+            </a>
+          </li>
+          <li class="sidebar__item">
+            <a class="sidebar__link" href="/statements" data-route="statements">
+              <span class="sidebar__icon" aria-hidden="true">
+                <img src="assets/icons/statements.svg?v=figma1" width="20" height="20" alt="">
+              </span>
+              <span class="sidebar__label">Statements</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="dashboard__main">
+
+      <header class="dashboard__toolbar toolbar" aria-label="Dashboard header" data-figma-node="1070:3879" data-module="market-data">
+        <div
+          class="toolbar__ticker ticker ticker--pha ticker--up"
+          data-toolbar-ticker
+          data-ticker="PhA"
+          data-direction="up"
+          role="button"
+          tabindex="0"
+          title="Click to switch PhA / PhB / FAB"
+          aria-label="Market ticker PhA. Click to switch product."
+        >
+          <div class="ticker__metrics">
+            <div class="ticker__primary">
+              <span class="ticker__code-group">
+                <span class="ticker__code" data-ticker-code>PhA</span>
+                <img class="ticker__arrow" data-ticker-arrow src="assets/icons/arrow-up.svg" width="10" height="10" alt="" aria-hidden="true">
+              </span>
+              <span class="ticker__price" data-ticker-price>82.0</span>
+            </div>
+            <div class="ticker__secondary">
+              <span class="ticker__delta" data-ticker-delta>2.27</span>
+              <span class="ticker__change" data-ticker-change>2.85%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="toolbar__simdate simdate" data-simdate>
+          <span class="simdate__label">Sim Date</span>
+          <div class="simdate__control">
+            <button class="simdate__nav" type="button" data-simdate-step="-1" aria-label="Previous simulation date">
+              <img src="assets/icons/chevron-left.svg" width="12" height="12" alt="" aria-hidden="true">
+            </button>
+            <button
+              class="simdate__trigger"
+              type="button"
+              data-simdate-trigger
+              aria-haspopup="dialog"
+              aria-expanded="false"
+              aria-controls="simdate-picker"
+            >
+              <time class="simdate__value toolbar__date" datetime="2023-04-24" data-simdate-value>24 Apr 2023</time>
+            </button>
+            <button class="simdate__nav" type="button" data-simdate-step="1" aria-label="Next simulation date">
+              <img src="assets/icons/chevron-right.svg" width="12" height="12" alt="" aria-hidden="true">
+            </button>
+          </div>
+
+          <div
+            class="simdate__picker"
+            id="simdate-picker"
+            data-simdate-picker
+            role="dialog"
+            aria-label="Select simulation date"
+            hidden
+          >
+            <div class="simdate__picker-header">
+              <button class="simdate__picker-nav" type="button" data-simdate-view-step="-1" aria-label="Previous">
+                <img src="assets/icons/chevron-left.svg" width="12" height="12" alt="" aria-hidden="true">
+              </button>
+              <div class="simdate__picker-title">
+                <button class="simdate__picker-month" type="button" data-simdate-open-months aria-label="Select month">Apr</button>
+                <button class="simdate__picker-year" type="button" data-simdate-open-years aria-label="Select year">2023</button>
+              </div>
+              <button class="simdate__picker-nav" type="button" data-simdate-view-step="1" aria-label="Next">
+                <img src="assets/icons/chevron-right.svg" width="12" height="12" alt="" aria-hidden="true">
+              </button>
+            </div>
+            <div class="simdate__picker-body" data-simdate-body>
+              <!-- filled by assets/js/sim-date.js -->
+            </div>
+          </div>
+        </div>
+
+        <div class="toolbar__filters" data-toolbar-filters hidden>
+          <label class="toolbar-filter">
+            <span class="toolbar-filter__label">Underlying</span>
+            <select class="toolbar-filter__select" name="underlying" aria-label="Underlying">
+              <option value="all" selected>All</option>
+              <option value="PhA">PhA</option>
+              <option value="PhB">PhB</option>
+              <option value="FAB">FAB</option>
+            </select>
+          </label>
+          <label class="toolbar-filter">
+            <span class="toolbar-filter__label">Contract</span>
+            <select class="toolbar-filter__select" name="contract" aria-label="Contract">
+              <option value="all" selected>All types</option>
+              <option value="spot">Spot</option>
+              <option value="fwd">Forward</option>
+            </select>
+          </label>
+          <label class="toolbar-filter" data-toolbar-filter="tradeName">
+            <span class="toolbar-filter__label">Trade Name</span>
+            <select class="toolbar-filter__select" name="tradeName" aria-label="Trade Name">
+              <option value="all" selected>All Trades</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="toolbar__actions">
+          <button class="toolbar__action" type="button" data-toolbar-action="msg" aria-pressed="false">
+            <span class="toolbar__action-icon-wrap toolbar__action-icon-wrap--msg" aria-hidden="true">
+              <img
+                class="toolbar__action-icon toolbar__action-icon--off"
+                src="assets/icons/msg.svg?v=figma2"
+                width="16"
+                height="13"
+                alt=""
+                draggable="false"
+              >
+              <img
+                class="toolbar__action-icon toolbar__action-icon--on"
+                src="assets/icons/msg-selected.svg?v=figma2"
+                width="16"
+                height="13"
+                alt=""
+                draggable="false"
+              >
+            </span>
+            Msg
+            <span class="toolbar__msg-badge" data-msg-badge hidden aria-label="Unread messages"></span>
+          </button>
+          <button class="toolbar__action" type="button" data-toolbar-action="help" aria-pressed="false">
+            <span class="toolbar__action-icon-wrap toolbar__action-icon-wrap--help" aria-hidden="true">
+              <img
+                class="toolbar__action-icon toolbar__action-icon--off"
+                src="assets/icons/help.svg?v=figma2"
+                width="16"
+                height="16"
+                alt=""
+                draggable="false"
+              >
+              <img
+                class="toolbar__action-icon toolbar__action-icon--on"
+                src="assets/icons/help-selected.svg?v=figma2"
+                width="16"
+                height="16"
+                alt=""
+                draggable="false"
+              >
+            </span>
+            Help
+          </button>
+          <button class="toolbar__action" type="button" data-toolbar-action="reset" aria-pressed="false">
+            <span class="toolbar__action-icon-wrap toolbar__action-icon-wrap--reset" aria-hidden="true">
+              <img
+                class="toolbar__action-icon toolbar__action-icon--off"
+                src="assets/icons/reset.svg?v=figma2"
+                width="16"
+                height="16"
+                alt=""
+                draggable="false"
+              >
+              <img
+                class="toolbar__action-icon toolbar__action-icon--on"
+                src="assets/icons/reset-selected.svg?v=figma2"
+                width="16"
+                height="16"
+                alt=""
+                draggable="false"
+              >
+            </span>
+            Reset
+          </button>
+        </div>
+      </header>
+
+      <section class="dashboard__content content" id="dashboard-content" aria-live="polite">
+        <!-- Module content injected by assets/js/navigation.js -->
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- Confirmation modal — Figma Confirmation modal (Assets / 1076:10253) -->
+  <div
+    class="modal-backdrop"
+    id="modal-confirm-backdrop"
+    hidden
+    aria-hidden="true"
+  >
+    <div
+      class="modal-confirm"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-confirm-title"
+      aria-describedby="modal-confirm-message"
+    >
+      <button
+        class="modal-confirm__close"
+        type="button"
+        data-confirm-close
+        aria-label="Close"
+      >
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <path
+            d="M1.5 1.5l11 11M12.5 1.5l-11 11"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+
+      <div class="modal-confirm__header">
+        <div class="modal-confirm__icon" aria-hidden="true">
+          <img
+            class="modal-confirm__icon-img"
+            src="assets/icons/confirm-warning.svg"
+            width="32"
+            height="32"
+            alt=""
+          />
+        </div>
+        <h2 class="modal-confirm__title" id="modal-confirm-title" data-confirm-title>
+          Confirmation
+        </h2>
+      </div>
+
+      <hr class="modal-confirm__divider" />
+
+      <p class="modal-confirm__body" id="modal-confirm-message" data-confirm-message>
+        Are you sure that you want reset the simulation data?
+      </p>
+
+      <div class="modal-confirm__actions">
+        <button class="modal-confirm__btn modal-confirm__btn--cancel" type="button" data-confirm-cancel>
+          Cancel
+        </button>
+        <button class="modal-confirm__btn modal-confirm__btn--accept" type="button" data-confirm-accept>
+          Accept
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Informative / Help modal — Figma Informative Modal -->
+  <div
+    class="modal-backdrop"
+    id="modal-help-backdrop"
+    hidden
+    aria-hidden="true"
+  >
+    <div
+      class="modal-info"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-help-title"
+      aria-describedby="modal-help-body"
+    >
+      <button
+        class="modal-info__close"
+        type="button"
+        data-help-close
+        aria-label="Close"
+      >
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <path
+            d="M1.5 1.5l11 11M12.5 1.5l-11 11"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+
+      <h2 class="modal-info__title" id="modal-help-title" data-help-title>Help</h2>
+      <hr class="modal-info__divider" />
+
+      <div class="modal-info__scroll">
+        <div class="modal-info__body" id="modal-help-body" data-help-body></div>
+
+        <div data-help-related-wrap hidden>
+          <p class="modal-info__related-label">Related content:</p>
+          <ul class="modal-info__related" data-help-related></ul>
+        </div>
+
+        <div class="modal-info__embed" data-help-embed hidden>
+          <img
+            class="modal-info__image"
+            data-help-image
+            alt=""
+            width="750"
+            decoding="async"
+          />
+        </div>
+      </div>
+
+      <div class="modal-info__actions">
+        <button class="modal-info__btn modal-info__btn--leave" type="button" data-help-leave>
+          Leave
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Message Centre -->
+  <div
+    class="modal-backdrop"
+    id="modal-msg-backdrop"
+    hidden
+    aria-hidden="true"
+  >
+    <div
+      class="modal-msg"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-msg-title"
+    >
+      <button
+        class="modal-msg__close"
+        type="button"
+        data-msg-close
+        aria-label="Close"
+      >
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <path
+            d="M1.5 1.5l11 11M12.5 1.5l-11 11"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+      <h2 class="modal-msg__title" id="modal-msg-title">HedgeTutor Message Centre</h2>
+      <hr class="modal-msg__divider" />
+      <div class="modal-msg__scroll">
+        <div class="modal-msg__empty" data-msg-empty hidden>
+          <p class="modal-msg__empty-text">No messages</p>
+        </div>
+        <div data-msg-list></div>
+      </div>
+      <div class="modal-msg__actions">
+        <button class="modal-msg__btn" type="button" data-msg-footer-close>Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading overlay -->
+  <div class="loading-overlay" id="loading-overlay" hidden aria-hidden="true" aria-busy="true">
+    <div class="loading-overlay__card" role="status">
+      <div class="loading-overlay__spinner" aria-hidden="true"></div>
+      <p class="loading-overlay__label">Loading</p>
+    </div>
+  </div>
+
+  <script src="assets/js/sim-state.js" defer></script>
+  <script src="assets/js/sim-date.js" defer></script>
+  <script src="assets/js/date-field.js" defer></script>
+  <script src="assets/js/table-sort.js" defer></script>
+  <script src="assets/js/select.js" defer></script>
+  <script src="assets/js/confirm-modal.js" defer></script>
+  <script src="assets/js/help-modal.js" defer></script>
+  <script src="assets/js/message-modal.js" defer></script>
+  <script src="assets/js/market-data.js" defer></script>
+  <script src="assets/js/physical-trading.js" defer></script>
+  <script src="assets/js/financial-trading.js" defer></script>
+  <script src="assets/js/payoff-exposure.js" defer></script>
+  <script src="assets/js/pnl-cashflow.js" defer></script>
+  <script src="assets/js/credit-line.js" defer></script>
+  <script src="assets/js/greeks.js" defer></script>
+  <script src="assets/js/statements.js" defer></script>
+  <script src="assets/js/navigation.js" defer></script>
+</body>
+</html>

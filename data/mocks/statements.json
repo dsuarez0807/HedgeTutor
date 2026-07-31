@@ -1,0 +1,38 @@
+{
+  "opsPhysical": {
+    "rows": [
+      { "label": "Revenue", "initial": "0", "may26": "", "total": "0", "budgeted": "0", "emphasis": false },
+      { "label": "Costs", "initial": "0", "may26": "-82.0", "total": "-82.0", "budgeted": "0", "emphasis": false },
+      { "label": "Inventory Costs", "initial": "0", "may26": "0", "total": "0", "budgeted": "0", "emphasis": false },
+      { "label": "Fixed costs", "initial": "0", "may26": "0", "total": "0", "budgeted": "0", "emphasis": false },
+      { "label": "Other Variable Costs", "initial": "0", "may26": "0", "total": "0", "budgeted": "0", "emphasis": false },
+      { "label": "Operational Income", "initial": "0", "may26": "-82.0", "total": "-82.0", "budgeted": "0", "emphasis": true }
+    ]
+  },
+  "opsFlow": {
+    "rows": [
+      { "label": "Cash Flow Futures", "initial": "0", "may26": "0", "total": "0", "budgeted": "0", "change": "0%", "emphasis": false },
+      { "label": "Cash Flow Swaps", "initial": "0", "may26": "0", "total": "0", "budgeted": "0", "change": "0%", "emphasis": false },
+      { "label": "Cash Flow Options", "initial": "0", "may26": "0", "total": "0", "budgeted": "0", "change": "0%", "emphasis": false },
+      { "label": "Transaction Costs", "initial": "0", "may26": "0", "total": "0", "budgeted": "0", "change": "0%", "emphasis": false },
+      { "label": "Credit Transfers", "initial": "0", "may26": "0", "total": "0", "budgeted": "0", "change": "0%", "emphasis": false },
+      { "label": "Financial Income", "initial": "0", "may26": "-82.0", "total": "-82.0", "budgeted": "-82.0", "change": "0%", "emphasis": true }
+    ]
+  },
+  "opsNet": {
+    "label": "Net Income",
+    "values": ["0", "-82.0", "-82.0", "-82.0", "Inf%"]
+  },
+  "finAssets": {
+    "rows": [
+      { "label": "Cash", "initial": "1,500.0", "may26": "1,418.0", "final": "1,418.0", "change": "-5.48%", "emphasis": false },
+      { "label": "Net Payables/Receivables", "initial": "0", "may26": "0", "final": "0", "change": "0%", "emphasis": false },
+      { "label": "Inventories", "initial": "0", "may26": "149.9", "final": "0", "change": "149.9", "emphasis": false },
+      { "label": "Derivatives", "initial": "0", "may26": "0", "final": "0", "change": "0%", "emphasis": false }
+    ]
+  },
+  "finNet": {
+    "label": "Net Income",
+    "values": ["0", "-82.0", "-82.0", "Inf%"]
+  }
+}

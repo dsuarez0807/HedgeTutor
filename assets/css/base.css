@@ -1,0 +1,17 @@
+/* Page shell — single scroll surface (dashboard content only).
+ * Chrome + sidebar stay fixed; body/page never scrolls vertically.
+ */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.app {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}

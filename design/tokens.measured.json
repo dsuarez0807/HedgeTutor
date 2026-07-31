@@ -1,0 +1,364 @@
+{
+  "frame": "PHYSICAL MARKET / Market Data",
+  "figma_node": "1032:1449",
+  "figma_file": "PlpBYncRbRMV9fSNGvUc18",
+  "source": "Figma Design Properties (sesión autenticada, browser MCP)",
+  "status": "visual-complete pass — chrome / PhA / icons / SVG charts / tables hydrated from mocks; some Properties still partial",
+  "measured": {
+    "colors": {
+      "page_bg": "#F6F6FA",
+      "canvas_idle": "#E5E5E5",
+      "surface": "#FFFFFF",
+      "sidebar_fill": "#1B297D",
+      "nav_item_active_fill": "#009EE0",
+      "nav_item_inactive_fill": "#1B297D",
+      "nav_item_text": "#FFFFFF",
+      "accent": "#009EE0",
+      "primary_button_fill": "#009EE0",
+      "primary_button_text": "#FFFFFF",
+      "input_select_selection_colors": [
+        { "hex": "#9696A0", "opacity_pct": 100 },
+        { "hex": "#B5B5C3", "opacity_pct": 38 }
+      ],
+      "drop_shadow_commos_color": "#ADACAC",
+      "selection_colors_frame_1032_1449": [
+        { "hex": "#364153", "style": "Neutral/Black/Black-100", "opacity_pct": 100 },
+        { "hex": "#FFFFFF", "opacity_pct": 100 },
+        { "hex": "#1B297D", "opacity_pct": 100 },
+        { "hex": "#E5E7EB", "opacity_pct": 100 },
+        { "hex": "#4A5565", "opacity_pct": 100 },
+        { "hex": "#EF4444", "opacity_pct": 100 },
+        { "hex": "#000000", "opacity_pct": 100 },
+        { "hex": "#009EE0", "opacity_pct": 100 },
+        { "hex": "#00A63E", "opacity_pct": 100 },
+        { "hex": "#2EBD57", "opacity_pct": 100 },
+        { "hex": "#3B82F6", "opacity_pct": 100 },
+        { "hex": "#F0F6FF", "opacity_pct": 100 },
+        { "hex": "#24BAE4", "opacity_pct": 100 },
+        { "hex": "#10B981", "opacity_pct": 100 },
+        { "hex": "#D1D1D1", "opacity_pct": 100 },
+        { "hex": "#DEDEDE", "opacity_pct": 100 },
+        { "hex": "#F65158", "opacity_pct": 100 },
+        { "hex": "#F6F6FA", "opacity_pct": 100 },
+        { "hex": "#FFBABA", "opacity_pct": 35 }
+      ]
+    },
+    "typography": {
+      "font_family": "Inter",
+      "weights_available_in_file": [
+        "Thin", "Extra Light", "Light", "Regular", "Medium", "Semi Bold", "Bold",
+        "Extra Bold", "Black",
+        "Thin Italic", "Extra Light Italic", "Light Italic", "Italic",
+        "Medium Italic", "Semi Bold Italic", "Bold Italic", "Extra Bold Italic", "Black Italic"
+      ],
+      "styles": {
+        "Commos-paragraph": {
+          "font_family": "Inter",
+          "font_style": "Regular",
+          "font_size_px": 14,
+          "line_height_px": 28,
+          "letter_spacing": "0%"
+        },
+        "commos-graph-text": {
+          "font_size_px": 13,
+          "line_height_px": 22,
+          "note": "Family presumed Inter from sibling style; Edit style family not re-opened this pass"
+        }
+      },
+      "section_title_MARKET_DATA_text_style": {
+        "font_size_px": 50,
+        "font_style": "Bold",
+        "letter_spacing_px": -0.15,
+        "line_height": "Auto (~61)",
+        "fill": "#009EE0",
+        "width_px": 359,
+        "height_px": 61,
+        "text_align": "LEFT",
+        "note": "Exists as measurable text style; frame MARKET DATA is a separate Dashboards layer from PHYSICAL MARKET (1032:1449) — not confirmed as H1 inside 1032:1449"
+      },
+      "lorem_toolbar_candidate_text": {
+        "font_family": "Inter",
+        "font_style": "Bold",
+        "font_size_px": 15,
+        "line_height_px": 22,
+        "letter_spacing_px": -0.1,
+        "fill": "#FFFFFF",
+        "note": "Layer from Dashboards Find 'LOREM IPSUM' (node ~1075:6060); parent toolbar structure not fully mapped this pass"
+      }
+    },
+    "spacing": {
+      "sidebar_gap_vertical_px": 16,
+      "sidebar_header_gap_horizontal_px": 12,
+      "sidebar_header_padding_horizontal_px": 16,
+      "sidebar_header_padding_vertical_px": 8,
+      "sidebar_padding": { "left_px": 0, "right_px": 0, "top_px": 16, "bottom_px": 24 },
+      "nav_item_gap_horizontal_px": 12,
+      "nav_item_padding_horizontal_px": 28,
+      "nav_item_padding_vertical_px": 0,
+      "primary_button_gap_px": 10,
+      "primary_button_padding_horizontal_px": 26,
+      "primary_button_padding_vertical_px": 13,
+      "dashboard_header_gap_horizontal_px": 20,
+      "dashboard_header_padding_horizontal_px": 0,
+      "dashboard_header_padding_vertical_px": 0
+    },
+    "dimensions": {
+      "frame": { "width_px": 1440, "height_px": 985 },
+      "sidebar": { "width_px": 238, "height_px": 1024, "x_px": 0, "y_px": 60 },
+      "sidebar_header": { "width_px": 238, "height_px": 60 },
+      "nav_item": { "width_px": 238, "height_px": 48 },
+      "nav_item_label_Market_Data": { "width_px": 148, "height_px": 22 },
+      "main_available_width_px": 1202,
+      "dashboard_header_toolbar": { "width_px": 1157, "height_px": 90, "figma_node": "1070:3879" },
+      "card_asset": { "width_px": 358, "height_px": 325, "figma_node": "129:920" },
+      "primary_button": { "width_px": 216, "height_px": 56, "figma_node": "104:466" },
+      "input_seletc": { "width_px": 213, "height_px": 45, "figma_node": "124:692" },
+      "nav_userlog_asset": { "width_px": 1440, "height_px": 104, "figma_node": "117:721" }
+    },
+    "radius": {
+      "frame_px": 0,
+      "sidebar_px": 0,
+      "sidebar_header_px": 4,
+      "nav_item_px": 0,
+      "card_asset_root_px": 0,
+      "primary_button_px": 50,
+      "input_seletc_root_px": 0,
+      "dashboard_header_px": 8,
+      "nav_userlog_root_px": 0
+    },
+    "shadows": {
+      "drop_shadow_commos": {
+        "type": "DROP_SHADOW",
+        "offset_x_px": 0,
+        "offset_y_px": 0,
+        "blur_px": 10,
+        "spread_px": 0,
+        "color": "#ADACAC",
+        "opacity_pct": 25,
+        "show_behind_transparent_areas": false,
+        "css_equivalent": "0 0 10px 0 rgba(173, 172, 172, 0.25)",
+        "note": "Effect style measured; application on Card / Dashboard Header root not confirmed (Effects empty on those roots)"
+      }
+    },
+    "layout": {
+      "frame": {
+        "layout": "Freeform",
+        "overflow": "No scrolling / Clip content",
+        "fill": "#F6F6FA"
+      },
+      "main_available_width_formula": "1440 - 238 = 1202",
+      "sidebar_y_implies_top_chrome_px": {
+        "value": 60,
+        "basis": "Side Menu Y=60",
+        "status": "NOT a measured topbar layer height — do not treat as Nav-UserLog (104px) nor Dashboard Header (90px)"
+      },
+      "dashboard_header_vs_sidebar": {
+        "dashboard_header_width_px": 1157,
+        "sidebar_width_px": 238,
+        "sum_px": 1395,
+        "frame_width_px": 1440,
+        "remainder_unexplained_px": 45,
+        "note": "Header X/Y relative to parent reported 0/0; absolute X after sidebar not layer-confirmed this pass"
+      },
+      "market_data_frame": {
+        "exists_as_separate_dashboards_layer": true,
+        "note": "Layers list on Dashboards includes both MARKET DATA and PHYSICAL MARKET as sibling frames — MARKET DATA 50px title is not proven to be the H1 of 1032:1449"
+      }
+    },
+    "components": {
+      "drop_shadow_commos": { "$ref": "measured.shadows.drop_shadow_commos" },
+      "side_menu": {
+        "layer": "Side Menu",
+        "figma_node": "984:5868",
+        "auto_layout": "Vertical",
+        "gap_vertical_px": 16,
+        "padding": { "left_px": 0, "right_px": 0, "top_px": 16, "bottom_px": 24 },
+        "corner_radius_px": 0,
+        "fill": "#1B297D",
+        "clip_content": true
+      },
+      "side_menu_header": {
+        "width_px": 238,
+        "height_px": 60,
+        "auto_layout": "Horizontal",
+        "gap_horizontal_px": 12,
+        "padding": { "horizontal_px": 16, "vertical_px": 8 },
+        "corner_radius_px": 4,
+        "fill": "#1B297D"
+      },
+      "side_menu_section_active": {
+        "layer": "Side menu section",
+        "state": "Selected",
+        "figma_node": "984:5875",
+        "width_px": 238,
+        "height_px": 48,
+        "auto_layout": "Horizontal",
+        "align": "Align left",
+        "gap_horizontal_px": 12,
+        "padding_horizontal_px": 28,
+        "padding_vertical_px": 0,
+        "corner_radius_px": 0,
+        "fill": "#009EE0",
+        "text_fill": "#FFFFFF"
+      },
+      "side_menu_section_inactive": {
+        "layer": "Side menu section",
+        "state": "Default",
+        "figma_node": "984:5876",
+        "width_px": 238,
+        "height_px": 48,
+        "auto_layout": "Horizontal",
+        "align": "Align left",
+        "gap_horizontal_px": 12,
+        "padding_horizontal_px": 28,
+        "padding_vertical_px": 0,
+        "corner_radius_px": 0,
+        "fill": "#1B297D",
+        "text_fill": "#FFFFFF",
+        "note": "Inactive fill matches sidebar — no distinct bg; text remains white"
+      },
+      "toolbar_fill_visual": {
+        "hex": "#24BAE4",
+        "basis": "Cyan bar observed on frame 1032:1449; #24BAE4 in selection colors. Root Dashboard Header Fill empty — child fill not Properties-selected.",
+        "status": "visual-confirmed"
+      },
+      "card_padding_visual": {
+        "value_px": 16,
+        "basis": "Title block height ≈54px (=16+22+16) on cards; Properties child pad not opened.",
+        "status": "visual-confirmed"
+      },
+      "toolbar_actions_visual": {
+        "fill": "#1B297D",
+        "text": "#FFFFFF",
+        "icons": true,
+        "basis": "Filled dark-blue chips with Msg/Help/Reset + icons observed on frame (not outline white).",
+        "status": "visual-confirmed"
+      },
+      "pha_ticker_visual": {
+        "surface": "#FFFFFF",
+        "code_color": "#F65158",
+        "price": 82.0,
+        "delta": 2.27,
+        "change_pct": 2.85,
+        "status": "visual-confirmed from frame readout"
+      },
+      "dashboard_header_toolbar": {
+        "layer": "Dashboard Header",
+        "figma_node": "1070:3879",
+        "instance_name_property": "Market Data",
+        "width_px": 1157,
+        "height_px": 90,
+        "auto_layout": "Horizontal",
+        "align": "Align top left",
+        "gap_horizontal_px": 20,
+        "padding_horizontal_px": 0,
+        "padding_vertical_px": 0,
+        "corner_radius_px": 8,
+        "root_fill": null,
+        "root_stroke": null,
+        "root_effects": null,
+        "child_order_visual": ["PhA ticker", "Sim Date", "Msg", "Help", "Reset"],
+        "note": "Root has no Fill; cyan bar visual-confirmed as #24BAE4. Fill implemented on .dashboard__toolbar."
+      },
+      "nav_userlog": {
+        "layer": "Nav-UserLog",
+        "figma_node": "117:721",
+        "page": "Assets",
+        "width_px": 1440,
+        "height_px": 104,
+        "layout": "Freeform",
+        "root_fill": null,
+        "role": "Marketing / site nav component — NOT proven as HedgeTutor dashboard topbar inside 1032:1449"
+      },
+      "card_asset": {
+        "layer": "Card",
+        "figma_node": "129:920",
+        "page": "Assets",
+        "width_px": 358,
+        "height_px": 325,
+        "layout": "Freeform",
+        "corner_radius_px": 0,
+        "root_fill": null,
+        "root_stroke": null,
+        "root_effects": null,
+        "selection_colors": ["#E5E5E5", "#FFFFFF"],
+        "note": "Internal padding / title↔chart gaps / which child has Drop-shadow-commos NOT measured (could not expand children via Properties this pass)"
+      },
+      "primary_button": {
+        "layer": "Primary-Button",
+        "figma_node": "104:466",
+        "width_px": 216,
+        "height_px": 56,
+        "resizing": "Hug (displayed Fixed width 216 / Fixed height 56)",
+        "auto_layout": "Horizontal",
+        "align": "Align top left",
+        "gap_px": 10,
+        "padding_horizontal_px": 26,
+        "padding_vertical_px": 13,
+        "corner_radius_px": 50,
+        "fill": "#009EE0",
+        "selection_colors": ["#009EE0", "#FFFFFF"]
+      },
+      "input_seletc": {
+        "layer": "input-seletc",
+        "figma_node": "124:692",
+        "width_px": 213,
+        "height_px": 45,
+        "layout": "Freeform",
+        "corner_radius_px": 0,
+        "root_fill": null,
+        "selection_colors": [
+          { "hex": "#9696A0", "opacity_pct": 100 },
+          { "hex": "#B5B5C3", "opacity_pct": 38 }
+        ]
+      }
+    }
+  },
+  "not_measured_yet": [
+    "Dashboard Header root fill hex (no fill on root; child cyan layer not selected)",
+    "Dashboard Header exact child order and typography for each control (Msg/Help/Reset sizes, LOREM vs SimDate)",
+    "Absolute X/Y of Dashboard Header vs Side Menu inside frame 1032:1449",
+    "HedgeTutor dashboard topbar layer distinct from Nav-UserLog (if any) — pad / avatar / gap",
+    "Card child structure: internal padding, border, applied Drop-shadow-commos, title↔content↔chart distances",
+    "Main content padding; toolbar↔content gap; chart grid column count and H/V gaps",
+    "Badge component W/H/fills (no Badge layer found in Assets list this pass)",
+    "input-date dimensions / radius / fill",
+    "commos-graph-text font-family absolute confirmation in Edit style",
+    "Whether frame 1032:1449 contains text node MARKET DATA (50px) or only card titles PHYSICAL MARKET / FINANCIAL MARKET"
+  ],
+  "html_vs_figma_diffs_confirmed": [
+    {
+      "topic": "Toolbar content",
+      "html": "SimDate + PhA/PhB/FAB tickers + Msg/Help/Reset + Underlying/Contract/Trade Name filters",
+      "figma": "Dashboard Header instance (Name=Market Data) — likely LOREM placeholder + PhA + date + Msg/Help/Reset; filters not confirmed on this layer"
+    },
+    {
+      "topic": "Page / card titles",
+      "html": "content__title PHYSICAL MARKET plus chart titles mix (PHYSICAL MARKET, Term Structure, etc.)",
+      "figma": "Frame name PHYSICAL MARKET; card identity PHYSICAL MARKET / FINANCIAL MARKET…; MARKET DATA is a separate Dashboards frame"
+    },
+    {
+      "topic": "Topbar",
+      "html": "HedgeTutor + HOME/TUTORIALS/CASE STUDIES/SIMULATIONS + User (GEN) avatar",
+      "figma": "Nav-UserLog in Assets is marketing nav (1440×104, no root fill); not proven inside shell of 1032:1449. Side Menu Y=60 only implies some top chrome"
+    },
+    {
+      "topic": "Sidebar header",
+      "html": "Empty sidebar__sim-name",
+      "figma": "Side menu header exists (238×60); LOREM-like sim name text appears elsewhere in dashboards"
+    }
+  ],
+  "html_structural_recommendations": [
+    "Replace toolbar markup: model after Dashboard Header (not assume SimDate/tickers/filters until children measured). Prefer LOREM / PhA / date / Msg / Help / Reset order once confirmed.",
+    "Remove content__title MARKET DATA / do not place 50px MARKET DATA as H1 of this screen — use separate MARKET DATA frame only if implementing that variant.",
+    "Keep card titles as PHYSICAL MARKET / FINANCIAL MARKET / etc. when matching this frame; drop chart-specific titles that are not on the frame.",
+    "Treat Nav-UserLog as optional / out-of-dashboard unless a Dashboard Header or other layer proves site topbar inside 1032:1449.",
+    "Nav active/inactive: active fill #009EE0, inactive fill #1B297D (= sidebar), text white both."
+  ],
+  "enough_for_css": {
+    "layout.css": false,
+    "components.css": false,
+    "responsive.css": false,
+    "why": "Shell (sidebar, nav states, dashboard header dims, primary button, shadow style) is largely ready, but layout.css still lacks main padding + grid gaps + absolute toolbar placement; components.css lacks Card internals, Badge, input fill/radius on control (not just freeform root), and toolbar fill/order. Do not start those CSS files until those Properties reads exist."
+  }
+}

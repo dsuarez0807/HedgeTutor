@@ -1,0 +1,396 @@
+<!-- Financial Trading — frame Figma 1032:3306 · fragment for #dashboard-content -->
+<div class="ft" data-module="financial-trading" data-figma-node="1032:3306" data-ft-instrument="futures">
+
+  <div class="ft__top">
+
+    <article class="card card--ft-input">
+      <header class="card__header pt-card__header pt-card__header--tabs">
+        <h2 class="card__title">FINANCIAL TRADING INPUT</h2>
+        <div class="tabs" role="tablist" aria-label="Instrument type">
+          <button class="tabs__btn tabs__btn--active" type="button" role="tab" aria-selected="true" data-ft-tab="futures">Futures</button>
+          <button class="tabs__btn" type="button" role="tab" aria-selected="false" data-ft-tab="options">Options</button>
+          <button class="tabs__btn" type="button" role="tab" aria-selected="false" data-ft-tab="swaps">Swaps</button>
+          <button class="tabs__btn" type="button" role="tab" aria-selected="false" data-ft-tab="combination">Combinations</button>
+        </div>
+      </header>
+
+      <div class="card__body ft-input">
+
+        <!-- Futures fields -->
+        <div class="ft-input__panel" data-ft-panel="futures">
+          <div class="pt-input__grid pt-input__grid--top">
+            <div class="field field--pt">
+              <label class="field__label" for="ft-contract">Contract</label>
+              <select class="select field__control field__control--pt" id="ft-contract" name="contract" data-ft-field="contract">
+                <option value="PhA" selected>PhA</option>
+                <option value="PhB">PhB</option>
+                <option value="FAB">FAB</option>
+              </select>
+            </div>
+            <div class="field field--pt">
+              <label class="field__label" for="ft-settlement">Settlement</label>
+              <select class="select field__control field__control--pt" id="ft-settlement" name="settlement" data-ft-field="settlement">
+                <option value="15May2026" selected>15May2026</option>
+                <option value="19May2026">19May2026</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="pt-input__grid pt-input__grid--top ft-input__qty-row">
+            <div class="field field--pt">
+              <label class="field__label" for="ft-close">Close SimDate</label>
+              <select class="select field__control field__control--pt" id="ft-close" name="closeSimDate" data-ft-field="closeSimDate">
+                <option value="15May2026" selected>15May2026</option>
+                <option value="19May2026">19May2026</option>
+              </select>
+            </div>
+            <div class="field field--pt">
+              <label class="field__label" for="ft-qty">Quantity (t)</label>
+              <div class="ft-qty">
+                <div class="stepper stepper--inline">
+                  <input class="input field__control field__control--pt stepper__input" id="ft-qty" name="quantity" type="text" value="1,000" inputmode="numeric" data-ft-field="quantity">
+                  <div class="stepper__actions">
+                    <button class="stepper__btn" type="button" data-step="-100" aria-label="Decrease quantity">−</button>
+                    <button class="stepper__btn" type="button" data-step="100" aria-label="Increase quantity">+</button>
+                  </div>
+                </div>
+                <span class="ft-qty__lots" data-ft="lotsLabel">100 (t)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Options fields -->
+        <div class="ft-input__panel" data-ft-panel="options" hidden>
+          <div class="pt-input__grid pt-input__grid--top">
+            <div class="field field--pt">
+              <label class="field__label" for="ft-opt-contract">Contract</label>
+              <select class="select field__control field__control--pt" id="ft-opt-contract" name="optContract" data-ft-field="contract">
+                <option value="FAB" selected>FAB</option>
+                <option value="PhA">PhA</option>
+                <option value="PhB">PhB</option>
+              </select>
+            </div>
+            <div class="field field--pt">
+              <label class="field__label" for="ft-option-type">Option Type</label>
+              <select class="select field__control field__control--pt" id="ft-option-type" name="optionType" data-ft-field="optionType">
+                <option value="Call" selected>Call</option>
+                <option value="Put">Put</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="pt-input__grid pt-input__grid--top ft-input__grid--options-row">
+            <div class="field field--pt">
+              <label class="field__label" for="ft-start">Start SimDate</label>
+              <select class="select field__control field__control--pt" id="ft-start" name="startSimDate" data-ft-field="startSimDate">
+                <option value="10April2026" selected>10April2026</option>
+                <option value="13April2026">13April2026</option>
+                <option value="15May2026">15May2026</option>
+              </select>
+            </div>
+            <div class="field field--pt">
+              <label class="field__label" for="ft-opt-close">Close SimDate</label>
+              <select class="select field__control field__control--pt" id="ft-opt-close" name="optCloseSimDate" data-ft-field="closeSimDate">
+                <option value="19May2026" selected>19May2026</option>
+                <option value="15May2026">15May2026</option>
+              </select>
+            </div>
+            <div class="field field--pt">
+              <label class="field__label" for="ft-opt-qty">Quantity (t)</label>
+              <div class="ft-qty">
+                <div class="stepper stepper--inline">
+                  <input class="input field__control field__control--pt stepper__input" id="ft-opt-qty" name="optQuantity" type="text" value="1,000" inputmode="numeric" data-ft-field="quantity">
+                  <div class="stepper__actions">
+                    <button class="stepper__btn" type="button" data-step="-100" aria-label="Decrease quantity">−</button>
+                    <button class="stepper__btn" type="button" data-step="100" aria-label="Increase quantity">+</button>
+                  </div>
+                </div>
+                <span class="ft-qty__lots" data-ft="lotsLabel">100 (t)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Swaps fields — Figma 1048:3976
+             Labels vs Options: Option Type→Settlement, Start SimDate→Strike Price -->
+        <div class="ft-input__panel" data-ft-panel="swaps" hidden>
+          <div class="pt-input__grid pt-input__grid--top">
+            <div class="field field--pt">
+              <label class="field__label" for="ft-swap-contract">Contract</label>
+              <select class="select field__control field__control--pt" id="ft-swap-contract" name="swapContract">
+                <option value="FAB" selected>FAB</option>
+                <option value="PhA">PhA</option>
+                <option value="PhB">PhB</option>
+              </select>
+            </div>
+            <div class="field field--pt">
+              <label class="field__label" for="ft-swap-settlement">Settlement</label>
+              <select class="select field__control field__control--pt" id="ft-swap-settlement" name="swapSettlement">
+                <option value="Monthly" selected>Monthly</option>
+                <option value="Weekly">Weekly</option>
+                <option value="Daily">Daily</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="pt-input__grid pt-input__grid--top ft-input__grid--swaps-row">
+            <div class="field field--pt">
+              <label class="field__label" for="ft-swap-strike">Strike Price</label>
+              <select class="select field__control field__control--pt" id="ft-swap-strike" name="swapStrikePrice">
+                <option value="70">70</option>
+                <option value="72" selected>72</option>
+                <option value="74">74</option>
+                <option value="76">76</option>
+              </select>
+            </div>
+            <div class="field field--pt">
+              <label class="field__label" for="ft-swap-close-trigger">Close SimDate</label>
+              <div class="date-field" data-date-field>
+                <input type="hidden" id="ft-swap-close" name="swapClose" value="19May2026" data-date-field-input>
+              </div>
+            </div>
+            <div class="field field--pt">
+              <label class="field__label" for="ft-swap-qty">Quantity (t)</label>
+              <div class="ft-qty">
+                <div class="stepper stepper--inline">
+                  <input class="input field__control field__control--pt stepper__input" id="ft-swap-qty" name="swapQuantity" type="text" value="1,000" inputmode="numeric">
+                  <div class="stepper__actions">
+                    <button class="stepper__btn" type="button" data-step="-100" aria-label="Decrease quantity">−</button>
+                    <button class="stepper__btn" type="button" data-step="100" aria-label="Increase quantity">+</button>
+                  </div>
+                </div>
+                <span class="ft-qty__lots" data-ft="lotsLabel">100 (t)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ft-input__panel" data-ft-panel="combination" hidden>
+          <div class="field field--pt">
+            <label class="field__label" for="ft-comb-contract">Contract</label>
+            <select class="select field__control field__control--pt" id="ft-comb-contract" name="combContract">
+              <option value="FAB" selected>FAB</option>
+              <option value="PhA">PhA</option>
+              <option value="PhB">PhB</option>
+            </select>
+          </div>
+
+          <div class="pt-input__grid pt-input__grid--top ft-input__grid--options-row">
+            <div class="field field--pt">
+              <label class="field__label" for="ft-comb-start">Start SimDate</label>
+              <select class="select field__control field__control--pt" id="ft-comb-start" name="combStart">
+                <option value="10April2026" selected>10April2026</option>
+                <option value="13April2026">13April2026</option>
+                <option value="15May2026">15May2026</option>
+              </select>
+            </div>
+            <div class="field field--pt">
+              <label class="field__label" for="ft-comb-close">Close SimDate</label>
+              <select class="select field__control field__control--pt" id="ft-comb-close" name="combClose">
+                <option value="19May2026" selected>19May2026</option>
+                <option value="15May2026">15May2026</option>
+              </select>
+            </div>
+            <div class="field field--pt">
+              <label class="field__label" for="ft-comb-qty">Quantity (t)</label>
+              <div class="ft-qty">
+                <div class="stepper stepper--inline">
+                  <input class="input field__control field__control--pt stepper__input" id="ft-comb-qty" name="combQuantity" type="text" value="1,000" inputmode="numeric">
+                  <div class="stepper__actions">
+                    <button class="stepper__btn" type="button" data-step="-100" aria-label="Decrease quantity">−</button>
+                    <button class="stepper__btn" type="button" data-step="100" aria-label="Increase quantity">+</button>
+                  </div>
+                </div>
+                <span class="ft-qty__lots" data-ft="lotsLabel">100 (t)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="field field--pt">
+            <label class="field__label" for="ft-comb-predef">Predefined Combination</label>
+            <select class="select field__control field__control--pt" id="ft-comb-predef" name="predefinedCombination">
+              <option value="Combination" selected>Combination</option>
+              <option value="Producer Collar">Producer Collar</option>
+              <option value="Consumer Collar">Consumer Collar</option>
+              <option value="Covered Call">Covered Call</option>
+              <option value="Long Straddle">Long Straddle</option>
+              <option value="Short Straddle">Short Straddle</option>
+              <option value="Long Strangle">Long Strangle</option>
+              <option value="Short Strangle">Short Strangle</option>
+              <option value="Bull Call Spread">Bull Call Spread</option>
+              <option value="Bear Call Spread">Bear Call Spread</option>
+              <option value="Bull Put Spread">Bull Put Spread</option>
+              <option value="Bear Put Spread">Bear Put Spread</option>
+            </select>
+          </div>
+
+          <div class="pt-input__grid pt-input__grid--top ft-input__grid--strikes">
+            <div class="field field--pt">
+              <label class="field__label" for="ft-trade-type-1">Trade Type 1</label>
+              <select class="select field__control field__control--pt" id="ft-trade-type-1" name="tradeType1">
+                <option value="Long Call" selected>Long Call</option>
+                <option value="Short Call">Short Call</option>
+                <option value="Long Put">Long Put</option>
+                <option value="Short Put">Short Put</option>
+              </select>
+            </div>
+            <div class="field field--pt">
+              <label class="field__label" for="ft-strike-1">Strike 1</label>
+              <select class="select field__control field__control--pt" id="ft-strike-1" name="strike1">
+                <option value="96" selected>96</option>
+                <option value="95">95</option>
+                <option value="100">100</option>
+              </select>
+            </div>
+            <div class="field field--pt">
+              <label class="field__label" for="ft-trade-type-2">Trade Type 2</label>
+              <select class="select field__control field__control--pt" id="ft-trade-type-2" name="tradeType2">
+                <option value="Short Put" selected>Short Put</option>
+                <option value="Long Put">Long Put</option>
+                <option value="Long Call">Long Call</option>
+                <option value="Short Call">Short Call</option>
+              </select>
+            </div>
+            <div class="field field--pt">
+              <label class="field__label" for="ft-strike-2">Strike 2</label>
+              <select class="select field__control field__control--pt" id="ft-strike-2" name="strike2">
+                <option value="95" selected>95</option>
+                <option value="96">96</option>
+                <option value="100">100</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="ft-meta" data-ft-standard-meta>
+          <p class="ft-trade-code">
+            Trade Code:
+            <span class="ft-trade-code__value" data-ft="tradeCode">FAB</span>
+          </p>
+          <p class="ft-implied-vol" data-ft-iv-row hidden>
+            Implied Volatility:
+            <span class="ft-trade-code__value" data-ft="impliedVol">40.0%</span>
+          </p>
+        </div>
+
+        <div class="pt-input__quote-row" data-ft-standard-quote>
+          <div class="quote-box quote-box--table">
+            <span class="quote-box__label">Market Quote ($/t)</span>
+            <div class="table-wrap table-wrap--quote">
+              <table class="table table--quote" data-table="marketQuote">
+                <thead class="table__head table__head--shaded" data-ft-quote-head>
+                  <tr class="table__row">
+                    <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num" scope="col">Lots</th>
+                    <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num" scope="col">Bid</th>
+                    <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num" scope="col">Ask</th>
+                    <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num" scope="col">Lots</th>
+                  </tr>
+                </thead>
+                <tbody class="table__body" data-ft-quote-body>
+                  <!-- hydrated -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="action-box">
+            <span class="action-box__label">Actions</span>
+            <div class="radio-row radio-row--compact" role="radiogroup" aria-label="Side">
+              <label class="radio">
+                <input class="radio__input" type="radio" name="ft-side" value="buy">
+                <span class="radio__label">Buy</span>
+              </label>
+              <label class="radio">
+                <input class="radio__input" type="radio" name="ft-side" value="sell" checked>
+                <span class="radio__label">Sell</span>
+              </label>
+            </div>
+            <button class="button button--confirm" type="button">Confirm</button>
+          </div>
+        </div>
+
+        <p class="pt-input__summary" data-ft="confirmSummary" data-ft-standard-summary>CF Amount = 1 lots * 1,000.0 t/lot * 72.8 $</p>
+
+        <div class="ft-comb-quote" data-ft-comb-quote hidden>
+          <div class="ft-comb-quote__body">
+            <span class="ft-comb-quote__label">Market Quote ($/t)</span>
+            <p class="ft-comb-quote__formula" data-ft="combQuote">- Call@1.35$/t + Put@1.40$/t = 0.050$/t</p>
+          </div>
+          <button class="button button--confirm button--confirm-trade" type="button">Confirm Trade</button>
+        </div>
+      </div>
+    </article>
+
+    <div class="ft__right">
+      <article class="card card--ft-sensitivity">
+        <header class="card__header pt-card__header pt-card__header--tabs">
+          <h2 class="card__title">SENSITIVITY ANALYSIS</h2>
+          <div class="tabs" role="tablist" aria-label="Sensitivity views">
+            <button class="tabs__btn tabs__btn--active" type="button" role="tab" aria-selected="true" data-ft-sens="payoff">Payoff ($/t)</button>
+            <button class="tabs__btn" type="button" role="tab" aria-selected="false" data-ft-sens="value">Value ($/t)</button>
+            <button class="tabs__btn" type="button" role="tab" aria-selected="false" data-ft-sens="delta">Delta</button>
+            <button class="tabs__btn" type="button" role="tab" aria-selected="false" data-ft-sens="vol">Volatility Smile</button>
+          </div>
+        </header>
+        <div class="card__body">
+          <div class="chart chart--payoff" data-chart="ft-payoff" role="img" aria-label="Sensitivity payoff chart"></div>
+        </div>
+      </article>
+
+      <article class="card card--ft-greeks">
+        <header class="card__header pt-card__header">
+          <h2 class="card__title">GREEKS</h2>
+        </header>
+        <div class="card__body">
+          <div class="table-wrap table-wrap--ft-greeks">
+            <table class="table table--ft-greeks" data-table="ftGreeks">
+              <thead class="table__head table__head--shaded">
+                <tr class="table__row">
+                  <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num" scope="col">Delta</th>
+                  <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num" scope="col">Gama</th>
+                  <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num" scope="col">Theta</th>
+                  <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num" scope="col">Vega</th>
+                  <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num" scope="col">Rho</th>
+                </tr>
+              </thead>
+              <tbody class="table__body" data-ft-greeks-body>
+                <!-- hydrated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <article class="card card--pt-trades card--ft-trades">
+    <header class="card__header pt-card__header">
+      <h2 class="card__title">SUMMARY OF EXECUTED PHYSICAL TRADES</h2>
+    </header>
+    <div class="card__body">
+      <div class="table-wrap">
+        <table class="table table--trades" data-table="ftExecutedTrades">
+          <thead class="table__head table__head--shaded">
+            <tr class="table__row">
+              <th class="table__cell table__cell--head table__cell--head-shaded" scope="col">Trade SimDate</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded" scope="col">Trade Code</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num table__cell--sort" scope="col">Qty (k)t Ini (final)</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--sort" scope="col">Delivery SimDate</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--sort" scope="col">Settle SimDate</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded" scope="col">Location</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num table__cell--sort" scope="col">Price $/t</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num table__cell--sort" scope="col">Amount (k$)</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded" scope="col">Comments</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--icon" scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody class="table__body" data-ft-trades-body>
+            <!-- hydrated -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </article>
+
+</div>

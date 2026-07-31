@@ -1,0 +1,74 @@
+{
+  "charts": {
+    "physical": {
+      "yMin": 50,
+      "yMax": 125,
+      "yTicks": [50, 65, 80, 95, 110, 125],
+      "xLabels": ["Dec 25", "Feb 26", "Apr 26", "Jun 26"],
+      "bandMax": 65,
+      "bandColor": "#FFBABA",
+      "bandOpacity": 0.35,
+      "series": [
+        {
+          "id": "physical",
+          "color": "#009EE0",
+          "points": [125, 118, 116, 117, 118, 119, 120, 122]
+        }
+      ]
+    },
+    "financial": {
+      "yMin": 50,
+      "yMax": 125,
+      "yTicks": [50, 65, 80, 95, 110, 125],
+      "xLabels": ["Dec 25", "Feb 26", "Apr 26", "Jun 26"],
+      "bandMax": 65,
+      "bandColor": "#FFBABA",
+      "bandOpacity": 0.35,
+      "series": [
+        {
+          "id": "financial",
+          "color": "#1B297D",
+          "points": [72, 72, 72, 72, 72, 72, 72, 72]
+        }
+      ]
+    },
+    "total": {
+      "yMin": 50,
+      "yMax": 125,
+      "yTicks": [50, 65, 80, 95, 110, 125],
+      "xLabels": ["May 26", "Sep 27", "Dec 27", "Apr 27"],
+      "bandMax": 65,
+      "bandColor": "#FFBABA",
+      "bandOpacity": 0.35,
+      "series": [
+        {
+          "id": "physical",
+          "color": "#EF4444",
+          "points": [125, 118, 116, 117, 118, 119, 120, 122]
+        },
+        {
+          "id": "financial",
+          "color": "#1B297D",
+          "points": [72, 72, 72, 72, 72, 72, 72, 72]
+        }
+      ]
+    }
+  },
+  "greeksSummary": {
+    "rows": [
+      { "simDate": "28May26", "tradeName": "PhA(15May26)_1", "cumDelta": "1.11", "delta": "1.11", "gama": "0", "rho": "0", "theta": "0", "vega": "0" },
+      { "simDate": "27May26", "tradeName": "PhA(15May26)_1", "cumDelta": "1.12", "delta": "1.12", "gama": "0", "rho": "0", "theta": "0", "vega": "0" },
+      { "simDate": "26May26", "tradeName": "PhA(15May26)_1", "cumDelta": "1.13", "delta": "1.13", "gama": "0", "rho": "0", "theta": "0", "vega": "0" },
+      { "simDate": "25May26", "tradeName": "PhA(15May26)_1", "cumDelta": "1.14", "delta": "1.14", "gama": "0", "rho": "0", "theta": "0", "vega": "0" },
+      { "simDate": "24May26", "tradeName": "PhA(15May26)_1", "cumDelta": "1.15", "delta": "1.15", "gama": "0", "rho": "0", "theta": "0", "vega": "0" },
+      { "simDate": "23May26", "tradeName": "PhA(15May26)_1", "cumDelta": "1.16", "delta": "1.16", "gama": "0", "rho": "0", "theta": "0", "vega": "0" },
+      { "simDate": "22May26", "tradeName": "PhA(15May26)_1", "cumDelta": "1.17", "delta": "1.17", "gama": "0", "rho": "0", "theta": "0", "vega": "0" },
+      { "simDate": "21May26", "tradeName": "PhA(15May26)_1", "cumDelta": "1.18", "delta": "1.18", "gama": "0", "rho": "0", "theta": "0", "vega": "0" },
+      { "simDate": "20May26", "tradeName": "PhA(15May26)_1", "cumDelta": "1.19", "delta": "1.19", "gama": "0", "rho": "0", "theta": "0", "vega": "0" },
+      { "simDate": "19May26", "tradeName": "PhA(15May26)_1", "cumDelta": "1.20", "delta": "1.20", "gama": "0", "rho": "0", "theta": "0", "vega": "0" },
+      { "simDate": "18May26", "tradeName": "PhA(15May26)_1", "cumDelta": "1.21", "delta": "1.21", "gama": "0", "rho": "0", "theta": "0", "vega": "0" },
+      { "simDate": "17May26", "tradeName": "PhA(15May26)_1", "cumDelta": "1.22", "delta": "1.22", "gama": "0", "rho": "0", "theta": "0", "vega": "0" },
+      { "simDate": "16May26", "tradeName": "PhA(15May26)_1", "cumDelta": "1.23", "delta": "1.23", "gama": "0", "rho": "0", "theta": "0", "vega": "0" }
+    ]
+  }
+}

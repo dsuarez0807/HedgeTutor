@@ -1,0 +1,90 @@
+<!-- Payoff and Exposure — frame Figma 1032:1705 · fragment for #dashboard-content -->
+<div class="pe" data-module="payoff-exposure" data-figma-node="1032:1705">
+
+  <div class="content__grid content__grid--charts pe__charts">
+
+    <article class="card card--chart">
+      <header class="card__header">
+        <h2 class="card__title">Payoff of physical portfolio</h2>
+        <p class="card__subtitle" data-pe-subtitle="physical-market">Physical Products Prices ($/t)</p>
+      </header>
+      <div class="card__body">
+        <div class="chart" data-pe-chart="physical-market" role="img" aria-label="Payoff of physical portfolio chart"></div>
+      </div>
+    </article>
+
+    <article class="card card--chart">
+      <header class="card__header">
+        <h2 class="card__title">Payoff of financial portfolio</h2>
+        <p class="card__subtitle" data-pe-subtitle="financial-market">Settlement Prices ($/t)</p>
+      </header>
+      <div class="card__body">
+        <div class="chart" data-pe-chart="financial-market" role="img" aria-label="Payoff of financial portfolio chart"></div>
+      </div>
+    </article>
+
+    <article class="card card--chart">
+      <header class="card__header">
+        <h2 class="card__title">Total Payoff</h2>
+        <p class="card__subtitle" data-pe-subtitle="termo-structure">Physical_Financial_Total</p>
+      </header>
+      <div class="card__body">
+        <div class="chart" data-pe-chart="termo-structure" role="img" aria-label="Total Payoff chart"></div>
+      </div>
+    </article>
+
+    <article class="card card--chart">
+      <header class="card__header">
+        <h2 class="card__title">Exposure of physical portfolio</h2>
+        <p class="card__subtitle" data-pe-subtitle="price-differentials" hidden></p>
+      </header>
+      <div class="card__body">
+        <div class="chart" data-pe-chart="price-differentials" role="img" aria-label="Exposure of physical portfolio chart"></div>
+      </div>
+    </article>
+
+    <article class="card card--chart">
+      <header class="card__header">
+        <h2 class="card__title">Exposure of financial portfolio</h2>
+        <p class="card__subtitle" data-pe-subtitle="annual-volatility" hidden></p>
+      </header>
+      <div class="card__body">
+        <div class="chart" data-pe-chart="annual-volatility" role="img" aria-label="Exposure of financial portfolio chart"></div>
+      </div>
+    </article>
+
+    <article class="card card--chart">
+      <header class="card__header">
+        <h2 class="card__title">Total Exposure</h2>
+        <p class="card__subtitle" data-pe-subtitle="annual-volatility-total">Physical_Financial_Total</p>
+      </header>
+      <div class="card__body">
+        <div class="chart" data-pe-chart="annual-volatility-total" role="img" aria-label="Total Exposure chart"></div>
+      </div>
+    </article>
+
+  </div>
+
+  <article class="card card--pe-exposure">
+    <header class="card__header pt-card__header">
+      <h2 class="card__title">EXPOSURE PROFILE</h2>
+    </header>
+    <div class="card__body">
+      <div class="table-wrap table-wrap--pe-exposure">
+        <table class="table table--pe-exposure" data-table="exposureProfile">
+          <thead class="table__head table__head--shaded">
+            <tr class="table__row">
+              <th class="table__cell table__cell--head table__cell--head-shaded" scope="col">Portfolio/Trade Name</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num" scope="col">Jul 26</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num" scope="col">Max</th>
+            </tr>
+          </thead>
+          <tbody class="table__body" data-pe-exposure-body>
+            <!-- hydrated -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </article>
+
+</div>

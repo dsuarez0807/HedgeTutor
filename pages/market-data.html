@@ -1,0 +1,184 @@
+<!-- Market Data module fragment — loaded into #dashboard-content -->
+<div class="content__grid content__grid--charts">
+
+  <article class="card card--chart">
+    <header class="card__header">
+      <h2 class="card__title">PHYSICAL MARKET</h2>
+      <p class="card__subtitle" data-chart-subtitle="physical-market">Physical Products Prices ($/t)</p>
+    </header>
+    <div class="card__body">
+      <div class="chart" data-chart="physical-market" role="img" aria-label="Physical Market chart"></div>
+    </div>
+  </article>
+
+  <article class="card card--chart">
+    <header class="card__header">
+      <h2 class="card__title">FINANCIAL MARKET</h2>
+      <p class="card__subtitle" data-chart-subtitle="financial-market">Settlement Prices ($/t)</p>
+    </header>
+    <div class="card__body">
+      <div class="chart" data-chart="financial-market" role="img" aria-label="Financial Market chart"></div>
+    </div>
+  </article>
+
+  <article class="card card--chart">
+    <header class="card__header">
+      <h2 class="card__title">Term Structure ($/t)</h2>
+      <p class="card__subtitle" data-chart-subtitle="term-structure">Term Structure ($/t)</p>
+    </header>
+    <div class="card__body">
+      <div class="chart" data-chart="term-structure" role="img" aria-label="Term Structure chart"></div>
+    </div>
+  </article>
+
+  <article class="card card--chart">
+    <header class="card__header">
+      <h2 class="card__title">Price Differentials ($/t)</h2>
+      <p class="card__subtitle" data-chart-subtitle="price-differentials">Price Differentials ($/t)</p>
+    </header>
+    <div class="card__body">
+      <div class="chart" data-chart="price-differentials" role="img" aria-label="Price Differentials chart"></div>
+    </div>
+  </article>
+
+  <article class="card card--chart">
+    <header class="card__header">
+      <h2 class="card__title">Annual Volatility (%)</h2>
+      <p class="card__subtitle" data-chart-subtitle="annual-volatility">Settlement Prices Annual Vol (%)</p>
+    </header>
+    <div class="card__body">
+      <div class="chart" data-chart="annual-volatility" role="img" aria-label="Annual Volatility chart"></div>
+    </div>
+  </article>
+
+  <article class="card card--chart">
+    <header class="card__header">
+      <h2 class="card__title">Market Inventory Levels</h2>
+      <p class="card__subtitle" data-chart-subtitle="inventory-levels">Market Inventory Levels</p>
+    </header>
+    <div class="card__body">
+      <div class="chart" data-chart="inventory-levels" role="img" aria-label="Market Inventory Levels chart"></div>
+    </div>
+  </article>
+
+</div>
+
+<article class="card card--tables">
+  <div class="card__body card__body--tables">
+
+    <section class="table-panel" aria-labelledby="md-physical-prices-title">
+      <h2 class="table-panel__title" id="md-physical-prices-title">Physical Prices ($/t)</h2>
+      <div class="table-wrap">
+        <table class="table" data-table="physicalPrices">
+          <thead class="table__head table__head--shaded">
+            <tr class="table__row">
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--sort" scope="col">Code</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num table__cell--sort" scope="col">Spot</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num table__cell--sort" scope="col">Last</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num table__cell--sort" scope="col">Last Month</th>
+            </tr>
+          </thead>
+          <tbody class="table__body">
+            <tr class="table__row">
+              <th class="table__cell table__cell--code table__cell--code-accent" scope="row">PhA</th>
+              <td class="table__cell table__cell--num table__cell--spot">82.0</td>
+              <td class="table__cell table__cell--num">
+                79.7
+                <span class="badge badge--positive">2.85%</span>
+              </td>
+              <td class="table__cell table__cell--num">
+                98.3
+                <span class="badge badge--negative">-16.6%</span>
+              </td>
+            </tr>
+            <tr class="table__row">
+              <th class="table__cell table__cell--code table__cell--code-accent" scope="row">PhB</th>
+              <td class="table__cell table__cell--num table__cell--spot">64.4</td>
+              <td class="table__cell table__cell--num">
+                63.0
+                <span class="badge badge--positive">2.30%</span>
+              </td>
+              <td class="table__cell table__cell--num">
+                79.4
+                <span class="badge badge--negative">-18.9%</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="table-panel" aria-labelledby="md-cash-prices-title">
+      <h2 class="table-panel__title" id="md-cash-prices-title">Cash Prices ($/t)</h2>
+      <div class="table-wrap">
+        <table class="table" data-table="cashPrices">
+          <thead class="table__head table__head--shaded">
+            <tr class="table__row">
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--sort" scope="col">Code</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num table__cell--sort" scope="col">Spot</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num table__cell--sort" scope="col">Last</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num table__cell--sort" scope="col">Last Month</th>
+            </tr>
+          </thead>
+          <tbody class="table__body">
+            <tr class="table__row">
+              <th class="table__cell table__cell--code table__cell--code-accent" scope="row">FAB</th>
+              <td class="table__cell table__cell--num table__cell--spot">73.5</td>
+              <td class="table__cell table__cell--num">
+                79.7
+                <span class="badge badge--positive">2.85%</span>
+              </td>
+              <td class="table__cell table__cell--num">
+                98.3
+                <span class="badge badge--negative">-16.6%</span>
+              </td>
+            </tr>
+            <tr class="table__row">
+              <th class="table__cell table__cell--code table__cell--code-cyan" scope="row">Vol%</th>
+              <td class="table__cell table__cell--num table__cell--spot">51.6</td>
+              <td class="table__cell table__cell--num"></td>
+              <td class="table__cell table__cell--num"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="table-panel" aria-labelledby="md-term-structure-prices-title">
+      <h2 class="table-panel__title" id="md-term-structure-prices-title">Term Structure Prices ($/t)</h2>
+      <div class="table-wrap">
+        <table class="table" data-table="termStructurePrices">
+          <thead class="table__head table__head--shaded">
+            <tr class="table__row">
+              <th class="table__cell table__cell--head table__cell--head-shaded" scope="col">Code</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num" scope="col">Spot</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num" scope="col">Spot</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num" scope="col">Spot</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num" scope="col">Spot</th>
+              <th class="table__cell table__cell--head table__cell--head-shaded table__cell--num" scope="col">Spot</th>
+            </tr>
+          </thead>
+          <tbody class="table__body">
+            <tr class="table__row">
+              <th class="table__cell table__cell--code table__cell--code-accent" scope="row">FAB</th>
+              <td class="table__cell table__cell--num">73.6</td>
+              <td class="table__cell table__cell--num">73.8</td>
+              <td class="table__cell table__cell--num">74.1</td>
+              <td class="table__cell table__cell--num">74.5</td>
+              <td class="table__cell table__cell--num">75.0</td>
+            </tr>
+            <tr class="table__row">
+              <th class="table__cell table__cell--code" scope="row"></th>
+              <td class="table__cell table__cell--num">-0.80</td>
+              <td class="table__cell table__cell--num">-0.27</td>
+              <td class="table__cell table__cell--num">0.41</td>
+              <td class="table__cell table__cell--num">0.95</td>
+              <td class="table__cell table__cell--num">1.62</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </div>
+</article>
