@@ -8,6 +8,18 @@
 
   var DEFAULT_ROUTE = "market-data";
 
+  var BASE_PATH = window.location.hostname.endsWith(".github.io")
+  ? "/" + window.location.pathname.split("/").filter(Boolean)[0]
+  : "";
+
+function getRouteUrl(routeId) {
+  return BASE_PATH + ROUTES[routeId].path;
+}
+
+function getFileUrl(file) {
+  return BASE_PATH + "/" + file.replace(/^\/+/, "");
+}
+
   var ROUTES = {
     "market-data": {
       path: "/market-data",
@@ -241,7 +253,7 @@
     if (cache[routeId]) {
       return Promise.resolve(cache[routeId]);
     }
-    return fetch(meta.file, { credentials: "same-origin" }).then(function (res) {
+    return fetch(getFileUrl(meta.file), { credentials: "same-origin" }).then(function (res) {
       if (!res.ok) {
         throw new Error("HTTP " + res.status + " loading " + meta.file);
       }
@@ -271,12 +283,12 @@
     updateShellContext(resolved);
 
     if (options.push) {
-      var nextUrl = ROUTES[resolved].path;
+      var nextUrl = getRouteUrl(resolved);
       if (window.location.pathname !== nextUrl) {
         history.pushState({ route: resolved }, ROUTES[resolved].title, nextUrl);
       }
     } else if (options.replace || wasUnknown) {
-      history.replaceState({ route: resolved }, ROUTES[resolved].title, ROUTES[resolved].path);
+      history.replaceState( { route: resolved }, ROUTES[resolved].title, getRouteUrl(resolved));
     }
 
     return fetchFragment(resolved)
