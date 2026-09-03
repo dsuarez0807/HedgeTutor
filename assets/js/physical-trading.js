@@ -600,7 +600,8 @@
 
     if (window.CommosConfirm && typeof window.CommosConfirm.bindTradeActions === "function") {
       window.CommosConfirm.bindTradeActions(root, {
-        getConfirmMessage: function () {
+        getConfirmMessage: function (btn) {
+          if (btn && btn.hasAttribute("data-trade-side")) return null;
           var summary = $('[data-pt="confirmSummary"]', root);
           return summary && summary.textContent.trim()
             ? summary.textContent.trim()
@@ -637,13 +638,15 @@
             window.CommosState.applyDomFilters(root);
           }
         },
-        onConfirm: function () {
+        onConfirm: function (btn, sideArg) {
           var productSel = root.querySelector('#pt-product, [name="product"]');
           var product = productSel && productSel.value ? productSel.value : "PhA";
           var qtyInput = root.querySelector("#pt-qty, .pt-input__grid--3 .stepper__input");
           var qty = qtyInput ? String(qtyInput.value).replace(/,/g, "") : "1000";
-          var sideBuy = root.querySelector('input[name="side"][value="buy"]');
-          var side = sideBuy && sideBuy.checked ? "BUY" : "SELL";
+          var side = sideArg || "BUY";
+          if (!sideArg && btn && btn.getAttribute("data-trade-side")) {
+            side = String(btn.getAttribute("data-trade-side")).toUpperCase();
+          }
           var locBtn = root.querySelector(".seg__btn--active, .seg__btn[aria-pressed='true']");
           var location = locBtn ? locBtn.textContent.trim() : "EMEA";
           var price = "82.0";

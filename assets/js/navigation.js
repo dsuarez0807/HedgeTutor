@@ -8,18 +8,6 @@
 
   var DEFAULT_ROUTE = "market-data";
 
-  var BASE_PATH = window.location.hostname.endsWith(".github.io")
-  ? "/" + window.location.pathname.split("/").filter(Boolean)[0]
-  : "";
-
-function getRouteUrl(routeId) {
-  return BASE_PATH + ROUTES[routeId].path;
-}
-
-function getFileUrl(file) {
-  return BASE_PATH + "/" + file.replace(/^\/+/, "");
-}
-
   var ROUTES = {
     "market-data": {
       path: "/market-data",
@@ -77,6 +65,8 @@ function getFileUrl(file) {
   var currentRoute = null;
   var cache = {};
   var loading = false;
+  /** Project site base, e.g. `/repo/` on GitHub Pages; `/` locally. */
+  var BASE_PATH = "/";
 
   function $(sel, root) {
     return (root || document).querySelector(sel);
@@ -103,8 +93,63 @@ function getFileUrl(file) {
     return null;
   }
 
-  function routeFromLocation() {
+  function computeBasePath() {
     var path = window.location.pathname || "/";
+    path = path.replace(/\/index\.html$/i, "/");
+    var segments = path.split("/").filter(Boolean);
+    if (!segments.length) return "/";
+
+    var last = segments[segments.length - 1].toLowerCase();
+    if (normalizeRoute(last) && ROUTES[normalizeRoute(last)]) {
+      segments.pop();
+    }
+    if (!segments.length) return "/";
+    return "/" + segments.join("/") + "/";
+  }
+
+  function routeUrl(routeId) {
+    var meta = ROUTES[routeId];
+    if (!meta) return BASE_PATH;
+    var slug = String(meta.path || "").replace(/^\//, "");
+    if (BASE_PATH === "/") return "/" + slug;
+    return BASE_PATH + slug;
+  }
+
+  function pageUrl(file) {
+    if (BASE_PATH === "/") return file;
+    return BASE_PATH + file;
+  }
+
+  function stripBasePath(pathname) {
+    var path = pathname || "/";
+    if (BASE_PATH === "/") return path;
+    var prefix = BASE_PATH.replace(/\/$/, "");
+    if (path === prefix || path === prefix + "/") return "/";
+    if (path.indexOf(prefix + "/") === 0) {
+      return path.slice(prefix.length) || "/";
+    }
+    return path;
+  }
+
+  function consumeSpaRedirect() {
+    var stored = null;
+    try {
+      stored = sessionStorage.getItem("commos-spa-redirect");
+      if (stored) sessionStorage.removeItem("commos-spa-redirect");
+    } catch (e) {
+      stored = null;
+    }
+    if (!stored) return;
+    try {
+      var u = new URL(stored, window.location.origin);
+      history.replaceState(null, "", u.pathname + u.search + u.hash);
+    } catch (e2) {
+      /* ignore bad redirect */
+    }
+  }
+
+  function routeFromLocation() {
+    var path = stripBasePath(window.location.pathname || "/");
     var fromPath = normalizeRoute(path);
     if (fromPath && ROUTES[fromPath]) return fromPath;
 
@@ -113,6 +158,16 @@ function getFileUrl(file) {
     if (fromHash && ROUTES[fromHash]) return fromHash;
 
     return DEFAULT_ROUTE;
+  }
+
+  function syncSidebarHrefs() {
+    if (!linkNodes) return;
+    linkNodes.forEach(function (link) {
+      var routeId = normalizeRoute(link.getAttribute("data-route"));
+      if (routeId && ROUTES[routeId]) {
+        link.setAttribute("href", routeUrl(routeId));
+      }
+    });
   }
 
   function setActiveLink(routeId) {
@@ -253,7 +308,7 @@ function getFileUrl(file) {
     if (cache[routeId]) {
       return Promise.resolve(cache[routeId]);
     }
-    return fetch(getFileUrl(meta.file), { credentials: "same-origin" }).then(function (res) {
+    return fetch(pageUrl(meta.file), { credentials: "same-origin" }).then(function (res) {
       if (!res.ok) {
         throw new Error("HTTP " + res.status + " loading " + meta.file);
       }
@@ -283,12 +338,12 @@ function getFileUrl(file) {
     updateShellContext(resolved);
 
     if (options.push) {
-      var nextUrl = getRouteUrl(resolved);
+      var nextUrl = routeUrl(resolved);
       if (window.location.pathname !== nextUrl) {
         history.pushState({ route: resolved }, ROUTES[resolved].title, nextUrl);
       }
     } else if (options.replace || wasUnknown) {
-      history.replaceState( { route: resolved }, ROUTES[resolved].title, getRouteUrl(resolved));
+      history.replaceState({ route: resolved }, ROUTES[resolved].title, routeUrl(resolved));
     }
 
     return fetchFragment(resolved)
@@ -523,6 +578,9 @@ function getFileUrl(file) {
   }
 
   function boot() {
+    consumeSpaRedirect();
+    BASE_PATH = computeBasePath();
+
     contentEl = $("#dashboard-content");
     toolbarEl = $(".dashboard__toolbar");
     linkNodes = $$(".sidebar__link[data-route]");
@@ -541,6 +599,7 @@ function getFileUrl(file) {
         }
       }
     });
+    syncSidebarHrefs();
 
     bootSidebarToggle();
     bootToolbarActions();
