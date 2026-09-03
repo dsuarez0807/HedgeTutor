@@ -689,6 +689,38 @@ img {
   filter: brightness(0.96);
 }
 
+.button.button--side {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 0;
+  width: 100%;
+  min-width: 0;
+  height: 40px;
+  margin: 0;
+  padding: 0 16px;
+  border: none;
+  border-radius: 6px;
+  color: var(--color-surface);
+  font-family: var(--font-family);
+  font-size: var(--font-size-graph);
+  line-height: var(--line-height-graph);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+}
+
+.button.button--side-buy {
+  background-color: var(--color-accent);
+}
+
+.button.button--side-sell {
+  background-color: var(--color-sidebar);
+}
+
+.button.button--side:hover {
+  filter: brightness(0.96);
+}
+
 /* ----- field / select / input ----- */
 
 .field {

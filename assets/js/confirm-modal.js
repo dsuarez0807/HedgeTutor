@@ -150,6 +150,28 @@
           return;
         }
 
+        var sideBtn = event.target.closest("[data-trade-side]");
+        if (sideBtn && root.contains(sideBtn)) {
+          event.preventDefault();
+          var sideRaw = (sideBtn.getAttribute("data-trade-side") || "buy").toLowerCase();
+          var sideLabel = sideRaw === "sell" ? "Sell" : "Buy";
+          var sideMessage = "Are you sure that want reset the " + sideLabel + "?";
+          if (typeof handlers.getConfirmMessage === "function") {
+            var sideCustom = handlers.getConfirmMessage(sideBtn, sideLabel);
+            if (sideCustom) sideMessage = sideCustom;
+          }
+          open({
+            title: "Confirmation",
+            message: sideMessage,
+            onAccept: function () {
+              if (typeof handlers.onConfirm === "function") {
+                handlers.onConfirm(sideBtn, sideLabel.toUpperCase());
+              }
+            },
+          });
+          return;
+        }
+
         var confBtn = event.target.closest(".button--confirm");
         if (confBtn && root.contains(confBtn)) {
           event.preventDefault();

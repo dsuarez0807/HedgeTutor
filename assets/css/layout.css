@@ -13,20 +13,30 @@
 .app {
   margin: 0;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: stretch;
-  /* ASSUMED: center the 1440 frame on the browser canvas (not from Figma frame props) */
+  width: var(--frame-width);
+  min-width: var(--frame-width);
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+html {
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 .dashboard {
   position: relative;
   width: var(--frame-width);
+  min-width: var(--frame-width);
   /* Fill viewport so chrome/sidebar stay on-screen; only content scrolls */
   height: 100%;
   overflow: hidden;
   /* clip mirrors Figma "Clip content" on frame 1032:1449 */
   --sidebar-current-width: var(--sidebar-width);
   --main-available-width: calc(var(--frame-width) - var(--sidebar-current-width));
+  flex-shrink: 0;
 }
 
 .dashboard--sidebar-collapsed {
@@ -1288,6 +1298,68 @@
   font-weight: var(--font-weight-semibold);
 }
 
+.action-box__btns {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin: 0;
+  flex: 1 1 auto;
+}
+
+.action-box__btns--row {
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.action-box__btns--stack {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.action-box--row {
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.action-box--stack {
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.action-box__label--center {
+  text-align: center;
+  width: 100%;
+}
+
+.button--side {
+  flex: 1 1 0;
+  width: 100%;
+  min-width: 0;
+  height: 40px;
+  margin: 0;
+  padding: 0 16px;
+  border: none;
+  border-radius: 6px;
+  color: var(--color-surface);
+  font-family: var(--font-family);
+  font-size: var(--font-size-graph);
+  line-height: var(--line-height-graph);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+}
+
+.button--side-buy {
+  background-color: var(--color-accent);
+}
+
+.button--side-sell {
+  background-color: var(--color-sidebar);
+}
+
+.button--side:hover {
+  filter: brightness(0.96);
+}
+
 .pt-input__summary {
   box-sizing: border-box;
   margin: 0;
@@ -1768,6 +1840,10 @@
   color: var(--color-sidebar);
 }
 
+.action-box__label--center {
+  margin-bottom: 4px;
+}
+
 .card--ft-sensitivity {
   min-height: 300px;
   flex: 1 1 auto;
@@ -1896,9 +1972,15 @@
   min-height: 148px;
 }
 
-.ft .action-box {
+.ft .action-box--stack {
   justify-content: flex-start;
-  gap: 4px;
+  gap: 8px;
+}
+
+.ft .action-box--stack .action-box__btns--stack {
+  flex: 1 1 auto;
+  justify-content: center;
+  gap: 10px;
 }
 
 .ft .action-box .button--confirm {

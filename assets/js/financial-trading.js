@@ -668,7 +668,8 @@
 
     if (window.CommosConfirm && typeof window.CommosConfirm.bindTradeActions === "function") {
       window.CommosConfirm.bindTradeActions(root, {
-        getConfirmMessage: function () {
+        getConfirmMessage: function (btn) {
+          if (btn && btn.hasAttribute("data-trade-side")) return null;
           var summary = $('[data-ft="confirmSummary"]', root);
           return summary && summary.textContent.trim()
             ? summary.textContent.trim()
@@ -704,16 +705,16 @@
             window.CommosState.applyDomFilters(root);
           }
         },
-        onConfirm: function () {
+        onConfirm: function (btn, sideArg) {
           var activeTab = $("[data-ft-tab].tabs__btn--active", root);
           var instrument =
             (activeTab && activeTab.textContent.trim()) || "Futures";
           var qtyInput = $(".stepper__input", root);
           var qty = qtyInput ? String(qtyInput.value).replace(/,/g, "") : "1000";
-          var sideBuy = root.querySelector('input[name="ft-side"][value="buy"], input[name="side"][value="buy"]');
-          var sideSell = root.querySelector('input[name="ft-side"][value="sell"], input[name="side"][value="sell"]');
-          var side = sideSell && sideSell.checked ? "SELL" : "BUY";
-          if (sideBuy && sideBuy.checked) side = "BUY";
+          var side = sideArg || "BUY";
+          if (!sideArg && btn && btn.getAttribute("data-trade-side")) {
+            side = String(btn.getAttribute("data-trade-side")).toUpperCase();
+          }
           var price = "82.0";
           var askCell = root.querySelector(".table__cell--ask, .table__cell--ask-hi");
           var bidCell = root.querySelector(".table__cell--bid, .table__cell--bid-hi");

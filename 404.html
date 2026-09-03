@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HedgeTutor</title>
+  <script>
+    /* GitHub Pages SPA fallback — keep deep links like /financial-trading */
+    (function () {
+      var known = {
+        "market-data": 1,
+        "physical-trading": 1,
+        "financial-trading": 1,
+        "payoff-exposure": 1,
+        "pnl-cash-flow": 1,
+        "pnl-cashflow": 1,
+        "credit-line": 1,
+        "greeks": 1,
+        "statements": 1
+      };
+      var segs = location.pathname.split("/").filter(Boolean);
+      var base = "/";
+      if (segs.length && !known[segs[0].toLowerCase()]) {
+        base = "/" + segs[0] + "/";
+      }
+      sessionStorage.setItem(
+        "commos-spa-redirect",
+        location.pathname + location.search + location.hash
+      );
+      location.replace(base);
+    })();
+  </script>
+</head>
+<body></body>
+</html>

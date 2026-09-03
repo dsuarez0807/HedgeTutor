@@ -294,19 +294,12 @@
             </div>
           </div>
 
-          <div class="action-box">
-            <span class="action-box__label">Actions</span>
-            <div class="radio-row radio-row--compact" role="radiogroup" aria-label="Side">
-              <label class="radio">
-                <input class="radio__input" type="radio" name="ft-side" value="buy">
-                <span class="radio__label">Buy</span>
-              </label>
-              <label class="radio">
-                <input class="radio__input" type="radio" name="ft-side" value="sell" checked>
-                <span class="radio__label">Sell</span>
-              </label>
+          <div class="action-box action-box--stack">
+            <span class="action-box__label action-box__label--center">Actions</span>
+            <div class="action-box__btns action-box__btns--stack" role="group" aria-label="Trade side">
+              <button class="button button--side button--side-buy" type="button" data-trade-side="buy">Buy</button>
+              <button class="button button--side button--side-sell" type="button" data-trade-side="sell">Sell</button>
             </div>
-            <button class="button button--confirm" type="button">Confirm</button>
           </div>
         </div>
 
